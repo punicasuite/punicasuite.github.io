@@ -1,0 +1,24 @@
+.btn-back {
+    width: 4.5rem;
+    height: 2rem;
+    background-color: rgba(194, 231, 243, 1);
+    border-radius: 0.13rem;
+    font-size: 1.13rem;
+    font-family: SourceSansPro-Semibold;
+    font-weight: 600;
+    color: rgba(43, 64, 69, 1);
+    border: none;
+    cursor: pointer;
+    padding: 4px 10px;
+    padding-left: 20px;
+    text-decoration: none; 
+    background-image:url('./assets/back_arrow@2x.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.btn-back:hover {
+    background-color: #C2E7F3;
+    color: #32A4BE;
+
+}
