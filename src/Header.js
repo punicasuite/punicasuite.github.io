@@ -125,7 +125,7 @@ const Header = (
           <Link className="Header-link" to="/">
             Home
           </Link>
-          <Link className="Header-link" to="/docs/">
+          <Link className="Header-link" to="/docs/punica">
               Docs
           </Link>
             <Link className="Header-link" to="/blog/">

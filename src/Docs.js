@@ -1,53 +1,62 @@
-// @flow
-
-import * as React from "react";
+import * as React from 'react'
 import {
-    withPhenomicApi,
-    query,
+    withPhenomicApi, query, 
     BodyRenderer
 } from "@phenomic/preset-react-app/lib/client";
-
-import pkg from "../package.json";
 
 import Layout from "./Layout";
 import PageError from "./PageError";
 import ActivityIndicator from "./ActivityIndicator";
+import { Route, Link } from "react-router";
+import DocBody from './DocBody'
+import '../static/docStyle.css'
 
-const Docs = ({ hasError, isLoading, page, posts }) =>
-    hasError ? (
-        <PageError error={page.error} />
-    ) : (
-            <React.Fragment>
-                <style
-                    dangerouslySetInnerHTML={{
-                        __html: `
-        .Page {
-          position: relative;
-        }
+class Docs extends React.PureComponent<props, void> {
 
-        .Page-content {
-          margin-bottom: 40px;
-        }
-        `
-                    }}
-                />
-                <Layout
-                    title={"Docs Page"}
-                >
-                    {isLoading && <ActivityIndicator />}
-                    {!isLoading && (
-                        <React.Fragment>
-                            <div>
-                                <p>
-                                    Docs here
-              </p>
-                            </div>
+    constructor(props) {
+        super(props)
+    }
+    static async getInitialProps() {
 
-                        </React.Fragment>
-                    )}
-                </Layout>
-            </React.Fragment>
-        );
+    }
+    render() {
+        const { isLoading, docs, hasError, doc } = this.props;
+        const docList = docs.node ? docs.node.list : []
+        return status === "error" ? (
+            <PageError error={hasError} />
+        ) : (
+                <React.Fragment>
+                    <Layout
+                        title={"Docs"}
+                        image=""
+                    >
+                        {isLoading && <ActivityIndicator />}
+                        {!isLoading && (
+                            <div class="doc-container">
+                                <ul>
+                                    {docList.map((item, index) =>
+                                        <li key={index} class="box-item">
+                                            <Link class="box-title" to={`/docs/${item.id}/`}>{item.title}</Link>
+                                        </li>
+                                    )}
+                                </ul>
+                                <DocBody doc={doc.node}/> 
+                            </div>)}
+                    </Layout>
+                </React.Fragment>
+            )
+
+    }
+}
 
 export default withPhenomicApi(Docs, props => ({
+    docs: query({
+        path: "content/docs",
+        limit:6
+    }),
+    doc: query({
+        path: 'content/docs',
+        id: props.params.splat
+    })
 }));
+

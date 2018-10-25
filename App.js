@@ -19,7 +19,7 @@ const routes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Page} />
     <Route path="/blog/" component={PageBlog} />
-    <Route path="/docs/" component={Docs} />
+    <Route path="/docs/*" component={Docs} />
     <Route path="/scs/" component={ScList} />
     <Route path="/blog/after/:after" component={PageBlog} />
     <Route path="/blog/*" component={PageBlogPost} />
