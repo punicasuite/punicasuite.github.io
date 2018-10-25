@@ -22,14 +22,13 @@ const LatestPosts = (
         }
 
         .LatestPosts-list {
-          max-width: 600px;
+          max-width: 620px;
           margin: auto;
           padding: 0;
           list-style:none;
         }
 
         .LatestPosts-list-item {
-          width: 39rem;
           background: rgba(255,255,255,1);
           border-radius: 0.19rem;
           padding:2rem;
@@ -50,7 +49,6 @@ const LatestPosts = (
         }
         
         .LatestPosts-list-item-link {
-          width:35rem;
           font-size:1.5rem;
           font-family:SourceSansPro-Regular;
           font-weight:400;
@@ -66,7 +64,6 @@ const LatestPosts = (
           margin-top:1rem;
         }
         .LatestPosts-list-item-date {
-          width:35rem;
           height:1.25rem;
           font-size:1rem;
           font-family:SourceSansPro-Bold;

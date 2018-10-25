@@ -12,11 +12,15 @@ import PageBlogPost from "./src/PageBlogPost";
 import PageRepositories from "./src/PageRepositories";
 import PageError from "./src/PageError";
 import PageBox from './src/PageBox'
+import Docs from './src/Docs'
+import ScList from './src/ScList'
 
 const routes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Page} />
     <Route path="/blog/" component={PageBlog} />
+    <Route path="/docs/" component={Docs} />
+    <Route path="/scs/" component={ScList} />
     <Route path="/blog/after/:after" component={PageBlog} />
     <Route path="/blog/*" component={PageBlogPost} />
     <Route path="/boxes/" component={PageBox} />   

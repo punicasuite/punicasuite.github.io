@@ -12,7 +12,6 @@ import pkg from "../package.json";
 import Layout from "./Layout";
 import PageError from "./PageError";
 import ActivityIndicator from "./ActivityIndicator";
-import LatestPosts from "./LatestPosts";
 
 const Page = ({ hasError, isLoading, page, posts }) =>
   hasError ? (
@@ -33,19 +32,17 @@ const Page = ({ hasError, isLoading, page, posts }) =>
         }}
       />
       <Layout
-        title={(page && page.node && page.node.title) || pkg.title}
-        image={page && page.node && page.node.image}
+        title={"Home Page"}
       >
         {isLoading && <ActivityIndicator />}
         {!isLoading && (
           <React.Fragment>
-            {/* <div className="Page-content">
-              {page &&
-                page.node &&
-                page.node.body && <BodyRenderer>{page.node.body}</BodyRenderer>}
-            </div>
-            <hr /> */}
-            <LatestPosts node={posts.node} error={posts.error} />
+            <div>
+              <p>
+                Home page here
+              </p>
+            </div> 
+
           </React.Fragment>
         )}
       </Layout>
@@ -53,13 +50,4 @@ const Page = ({ hasError, isLoading, page, posts }) =>
   );
 
 export default withPhenomicApi(Page, props => ({
-  page: query({
-    path: "content/pages",
-    id: props.params.splat || ""
-  }),
-  posts: query({
-    path: "content/posts",
-    limit: 20,
-    after: props.params.after
-  })
 }));

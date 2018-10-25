@@ -11,7 +11,7 @@ import {
 import Layout from "./Layout";
 import ActivityIndicator from "./ActivityIndicator";
 import backImg from '../static/assets/back_arrow@2x.png';
-import '../static/style.css'
+import '../static/pageStyle.css'
 const PostLayoutNoHero = (
   { isLoading, post } /*: { isLoading: boolean, post: Object }*/
 ) => (

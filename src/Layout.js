@@ -49,12 +49,12 @@ const Layout = (
 
         .Layout-children {
           position: relative;
-          // max-width: 1000px;
+          max-width: 630px;
           margin: 30px auto;
           border-radius: 3px;
           font-size: 18px;
           line-height: 2;
-          width:40%;
+          padding:10px;
         }
 
         .Layout-children a {
@@ -119,8 +119,6 @@ const Layout = (
           margin: 40px;
         }
         .Layout-children-title {
-          width:39rem;
-          height:6.06rem;
           font-size:2.63rem;
           font-family:SourceSansPro-ExtraLight;
           font-weight:200;
@@ -128,7 +126,6 @@ const Layout = (
           line-height:3.25rem
         }
         .Layout-children-dateAuthor {
-          // width:14.31rem;
           height:1.25rem;
           font-size:1rem;
           font-family:SourceSansPro-Bold;

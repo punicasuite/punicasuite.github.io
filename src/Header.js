@@ -125,8 +125,17 @@ const Header = (
           <Link className="Header-link" to="/">
             Home
           </Link>
+          <Link className="Header-link" to="/docs/">
+              Docs
+          </Link>
+            <Link className="Header-link" to="/blog/">
+              Tutorials
+          </Link>
             <Link className="Header-link" to="/boxes/">
             Boxes
+          </Link>
+            <Link className="Header-link" to="/scs/">
+              Smart contracts
           </Link>
         </div>
         <div className="Header-navPart2">

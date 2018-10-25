@@ -10,6 +10,7 @@ import PageError from "./PageError";
 import ActivityIndicator from "./ActivityIndicator";
 
 import data from '../content/boxes/data.json'
+import '../static/boxStyle.css'
 
 class PageBox extends React.PureComponent<props, void> {
 
@@ -31,13 +32,18 @@ class PageBox extends React.PureComponent<props, void> {
                     >
                         {status === "loading" && <ActivityIndicator />}
                         {status === "ready" && (
-                        <div>
+                        <div class="box-container">
                             <ul>
                                 {data.map((item,index) => 
-                                    <li key={index}>
-                                        <p>{item.title}</p>
-                                        <p>{item.repo}</p>
-                                        <p>{item.tags}</p>
+                                    <li key={index} class="box-item">
+                                        <h3 class="box-title">{item.title}</h3>
+                                        {item.github && <a href={item.github} target="_blank">Github</a> }
+                                        <div class="box-tags">
+                                            {item.tags.map((tag) => (
+                                                <span>{tag}</span>
+                                            ))}
+                                        </div>
+                                        
                                         {(item.logo && <img src={item.logo} />)}
                                     </li>
                                 )}
