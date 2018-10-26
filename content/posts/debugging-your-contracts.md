@@ -1,6 +1,6 @@
 ---
-title: "This is a first post"
-date: "2017-01-01"
+title: "debugging-your-contracts"
+date: "2018-11-01"
 author: Lee Ming
 ---
 
