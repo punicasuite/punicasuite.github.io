@@ -35,10 +35,10 @@ class ScList extends React.PureComponent<props, void> {
                             <div class="box-container">
                                 <ul>
                                     {data.map((item, index) =>
-                                        <li key={index} class="box-item">
-                                            <h3 class="box-title">{item.title}</h3>
+                                        <li key={index} class="sc-item">
+                                            <h3 class="sc-title">{item.title}</h3>
                                             {item.github && <a href={item.github} target="_blank">Github</a>}
-                                            <div class="box-tags">
+                                            <div class="sc-tags">
                                                 {item.tags.map((tag) => (
                                                     <span>{tag}</span>
                                                 ))}

@@ -1,11 +1,28 @@
+.box-container {
+    display: flex;
+}
 .box-container ul {
     list-style: none;
+    margin:0 auto;
+}
+
+.box-layout {
+    position: relative;
+    max-width: 60% !important;
+    margin: 30px auto;
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 2;
+    padding: 10px;
 }
 
 .box-item {
     margin:10px;
-    border: 1px solid #dddddd;
+    border: 3px solid #dddddd;
+    border-radius:10px;
     padding:5px;
+    width: 300px;
+    float:left;
 }
 
 .box-title {
@@ -25,4 +42,8 @@
     height:30px;
     line-height: 15px;
     font-size: 14px;
+}
+.box-logo {
+    weight:50px;
+    height:50px;
 }

@@ -3,28 +3,56 @@
         "title": "tutorialtoken-box",
         "github": "https://github.com/punica-box/tutorialtoken-box",
         "tags": ["python", "token"],
-        "logo": "",
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Oep4 demo developed with Punica."
     },
     {
         "title": "oep4-box",
         "github": "https://github.com/punica-box/oep4-box",
         "tags": ["typescript", "token"],
-        "logo": "",
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Oep4 demo developed with Punica."
     },
     {
         "title": "tokenexchange-box",
         "github": "https://github.com/punica-box/tokenexchange-box",
         "tags": ["typescript", "token exchange"],
-        "logo": "",
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Token exchange demo developed with Punica."
     },
     {
         "title": "punica-init-default-box",
         "github": "https://github.com/punica-box/punica-init-default-box",
         "tags": ["typescript", "init"],
-        "logo": "",
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
+        "desc": "Init box developed with Punica."
+    },
+        {
+        "title": "tutorialtoken-box",
+        "github": "https://github.com/punica-box/tutorialtoken-box",
+        "tags": ["python", "token"],
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
+        "desc": "Oep4 demo developed with Punica."
+    },
+    {
+        "title": "oep4-box",
+        "github": "https://github.com/punica-box/oep4-box",
+        "tags": ["typescript", "token"],
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
+        "desc": "Oep4 demo developed with Punica."
+    },
+    {
+        "title": "tokenexchange-box",
+        "github": "https://github.com/punica-box/tokenexchange-box",
+        "tags": ["typescript", "token exchange"],
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
+        "desc": "Token exchange demo developed with Punica."
+    },
+    {
+        "title": "punica-init-default-box",
+        "github": "https://github.com/punica-box/punica-init-default-box",
+        "tags": ["typescript", "init"],
+        "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Init box developed with Punica."
     }
 ]
