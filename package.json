@@ -23,7 +23,7 @@
     ],
     "webpackConfig": "./webpack.config.js"
   },
-  "title": "Ontology dApp docs",
+  "title": "Ontology dApp tutorials",
   "home_page": "https://ont.io",
-  "github": "http://github.com/ontio"
+  "github": "http://github.com/punicasuite"
 }

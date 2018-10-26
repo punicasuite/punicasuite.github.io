@@ -27,7 +27,7 @@ class PageBox extends React.PureComponent<props, void> {
         ) : (
                 <React.Fragment>
                     <Layout
-                        title={"Boxes"}
+                        title={"Punica Boxes"}
                         image=""
                     >
                         {status === "loading" && <ActivityIndicator />}

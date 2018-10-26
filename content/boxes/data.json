@@ -5,5 +5,26 @@
         "tags": ["python", "token"],
         "logo": "",
         "desc": "Oep4 demo developed with Punica."
+    },
+    {
+        "title": "oep4-box",
+        "github": "https://github.com/punica-box/oep4-box",
+        "tags": ["typescript", "token"],
+        "logo": "",
+        "desc": "Oep4 demo developed with Punica."
+    },
+    {
+        "title": "tokenexchange-box",
+        "github": "https://github.com/punica-box/tokenexchange-box",
+        "tags": ["typescript", "token exchange"],
+        "logo": "",
+        "desc": "Token exchange demo developed with Punica."
+    },
+    {
+        "title": "punica-init-default-box",
+        "github": "https://github.com/punica-box/punica-init-default-box",
+        "tags": ["typescript", "init"],
+        "logo": "",
+        "desc": "Init box developed with Punica."
     }
 ]
