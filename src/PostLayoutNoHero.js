@@ -29,7 +29,7 @@ const PostLayoutNoHero = (
           <div class="btn-back-container">
             
             <Link
-              to={'/blog/'}
+              to={'/tutorials/'}
               class="btn-back"
             >
               {/* <img src={backImg} class="back-icon" /> */}

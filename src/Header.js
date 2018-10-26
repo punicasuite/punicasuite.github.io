@@ -128,13 +128,13 @@ const Header = (
           <Link className="Header-link" to="/docs/punica">
               Docs
           </Link>
-            <Link className="Header-link" to="/blog/">
+            <Link className="Header-link" to="/tutorials/">
               Tutorials
           </Link>
             <Link className="Header-link" to="/boxes/">
             Boxes
           </Link>
-            <Link className="Header-link" to="/scs/">
+            <Link className="Header-link" to="/scpm/">
               Smart contracts
           </Link>
         </div>

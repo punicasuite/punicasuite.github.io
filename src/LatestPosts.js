@@ -94,7 +94,7 @@ const LatestPosts = (
               {node.list.map(post => (
                 <li key={post.id} className="LatestPosts-list-item">
                   <Link
-                    to={`/blog/${post.id}/`}
+                    to={`/tutorials/${post.id}/`}
                     className="LatestPosts-list-item-link"
                   >
                     {post.title || post.id}
@@ -110,8 +110,8 @@ const LatestPosts = (
                   <Link
                     to={
                       node.previousPageIsFirst
-                        ? `/blog/`
-                        : `/blog/after/${node.previous}/`
+                        ? `/tutorials/`
+                        : `/tutorials/after/${node.previous}/`
                     }
                   >
                     Newer posts
@@ -119,7 +119,7 @@ const LatestPosts = (
                 )}{" "}
               {node &&
                 node.next && (
-                  <Link to={`/blog/after/${node.next}/`}>Older posts</Link>
+                  <Link to={`/tutorials/after/${node.next}/`}>Older posts</Link>
                 )}
             </div>
           </React.Fragment>

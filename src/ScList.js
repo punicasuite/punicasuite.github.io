@@ -27,7 +27,7 @@ class ScList extends React.PureComponent<props, void> {
         ) : (
                 <React.Fragment>
                     <Layout
-                        title={"Boxes"}
+                        title={"Smart contracts"}
                         image=""
                     >
                         {status === "loading" && <ActivityIndicator />}
