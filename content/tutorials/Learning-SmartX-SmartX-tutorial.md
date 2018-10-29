@@ -1,6 +1,6 @@
 ---
-title: "How to use SmartX?"
-date: "2018-10-26"
+title: "Learning SmartX: How to use SmartX?"
+date: "2018-11-04"
 author: Josh Chow
 ---
 

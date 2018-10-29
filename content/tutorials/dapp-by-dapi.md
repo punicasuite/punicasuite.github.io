@@ -1,9 +1,10 @@
 ---
-title: "Ontology dApp development tutorial"
-date: "2018-11-02"
+title: "dAPI tutorial"
+date: "2018-11-05"
 author: Mickey
 ---
 
+> Note: **This** document from [dapi-tutorial](https://ontio.github.io/documentation/ontology_dapp_dev_tutorial_en.html).
 
 
 This tutorial is designed to give you an overview of creating a dApp using the Ontology dApp API (dAPI) and including the information on the tools required and shoulds en example dApp.
@@ -163,6 +164,6 @@ Now that we have written our smart contract, the next steps are to deploy and in
 
 In order to test the smart contract, you can use the [smart contract automated testing framework](https://github.com/ontio-community/ontology-sctf) or deploy your own Ontology privatenet running in testmode by downloading the latest [Ontology release](https://github.com/ontio/ontology/releases) and starting it as below.
 ```
-$ ./ontology --testmode --gasprice 0
+$ ./ontology --testmode
 
 ```

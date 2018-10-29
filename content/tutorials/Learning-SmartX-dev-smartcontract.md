@@ -1,5 +1,5 @@
 ---
-title: "How to test smartcontract in Ontology?"
+title: "Learning SmartX: smart contract development "
 date: "2018-10-26"
 author: Josh Chow
 ---

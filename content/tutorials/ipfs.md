@@ -1,5 +1,5 @@
 ---
-title: "How to use IPFS?"
+title: "How to use IPFS with ontid?"
 date: "2018-11-03"
 author: Josh
 ---
