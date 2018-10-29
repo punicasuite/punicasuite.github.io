@@ -1,11 +1,9 @@
 ---
-title: "Learning SmartX: How to Test a Smart Contract"
-date: "2018-11-03"
+title: "Learning SmartX: How to Test a Smart Contract?"
+date: "2018-11-04"
 author: Yue Zhao
 ---
 
-<h1 align="center">Learning SmartX: How to Test a Smart Contract</h1>
-<p align="center" class="version">Version 0.1</p>
 
 ### 1. Create a python project
 
