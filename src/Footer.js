@@ -42,8 +42,8 @@ const Footer = () => (
           <Link className="Footer-link" to="/">
             Home
           </Link>
-          <Link className="Footer-link" to="/blog/">
-            Blog
+          <Link className="Footer-link" to="/tutorials/">
+            Tutorials
           </Link>
         </nav>
         <div className="Footer-part">

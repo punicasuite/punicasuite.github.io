@@ -20,7 +20,7 @@ class Docs extends React.PureComponent<props, void> {
 
     }
     render() {
-        const { isLoading, docs, hasError, doc } = this.props;
+        const { isLoading, docs, hasError, doc,status } = this.props;
         const docList = docs.node ? docs.node.list : []
         return status === "error" ? (
             <PageError error={hasError} />
@@ -33,10 +33,10 @@ class Docs extends React.PureComponent<props, void> {
                         {isLoading && <ActivityIndicator />}
                         {!isLoading && (
                             <div class="doc-container">
-                                <ul>
+                                <ul class="doc-ul">
                                     {docList.map((item, index) =>
-                                        <li key={index} class="box-item">
-                                            <Link class="box-title" to={`/docs/${item.id}/`}>{item.title}</Link>
+                                        <li key={index} class="doc-item">
+                                            <Link class="doc-title" to={`/docs/${item.id}/`}>{item.title}</Link>
                                         </li>
                                     )}
                                 </ul>

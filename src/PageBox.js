@@ -27,8 +27,9 @@ class PageBox extends React.PureComponent<props, void> {
         ) : (
                 <React.Fragment>
                     <Layout
-                        title={"Boxes"}
+                        title={"Punica Boxes"}
                         image=""
+                        classAttr={"box-layout"}
                     >
                         {status === "loading" && <ActivityIndicator />}
                         {status === "ready" && (
@@ -44,7 +45,7 @@ class PageBox extends React.PureComponent<props, void> {
                                             ))}
                                         </div>
                                         
-                                        {(item.logo && <img src={item.logo} />)}
+                                        {(item.logo && <img src={item.logo} class="box-logo" />)}
                                     </li>
                                 )}
                             </ul>     

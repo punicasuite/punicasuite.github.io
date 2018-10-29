@@ -18,11 +18,11 @@ import ScList from './src/ScList'
 const routes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Page} />
-    <Route path="/blog/" component={PageBlog} />
+    <Route path="/tutorials/" component={PageBlog} />
     <Route path="/docs/*" component={Docs} />
-    <Route path="/scs/" component={ScList} />
-    <Route path="/blog/after/:after" component={PageBlog} />
-    <Route path="/blog/*" component={PageBlogPost} />
+    <Route path="/scpm/" component={ScList} />
+    <Route path="/tutorials/after/:after" component={PageBlog} />
+    <Route path="/tutorials/*" component={PageBlogPost} />
     <Route path="/boxes/" component={PageBox} />   
     <Route path="/repositories/" component={PageRepositories} />
     <Route path="/repositories/page/:page" component={PageRepositories} />

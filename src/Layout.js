@@ -11,7 +11,8 @@ const Layout = (
     title,
     image,
     noHero,
-    children
+    children,
+    classAttr
   } /*: {
     title?: React.Node,
     image?: string,
@@ -145,7 +146,7 @@ const Layout = (
     </Head>
     <Header title={title} image={image} light={noHero} />
     <div className="Layout-body">
-      <div className="Layout-children">{children}</div>
+      <div className={"Layout-children "+ classAttr}>{children}</div>
     </div>
     <Footer />
   </div>
