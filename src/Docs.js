@@ -20,7 +20,7 @@ class Docs extends React.PureComponent<props, void> {
 
     }
     render() {
-        const { isLoading, docs, hasError, doc } = this.props;
+        const { isLoading, docs, hasError, doc,status } = this.props;
         const docList = docs.node ? docs.node.list : []
         return status === "error" ? (
             <PageError error={hasError} />
