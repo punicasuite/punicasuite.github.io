@@ -52,7 +52,6 @@ const Layout = (
           max-width: 630px;
           margin: 30px auto;
           border-radius: 3px;
-          font-size: 18px;
           line-height: 2;
           padding:10px;
         }

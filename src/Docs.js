@@ -52,7 +52,8 @@ class Docs extends React.PureComponent<props, void> {
 export default withPhenomicApi(Docs, props => ({
     docs: query({
         path: "content/docs",
-        limit:6
+        limit:6,
+        sort: "index"
     }),
     doc: query({
         path: 'content/docs',

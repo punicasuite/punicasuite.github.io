@@ -1,6 +1,7 @@
 ---
 title: "Solo chain"
 name: "Solo chain"
+index: 3
 ---
 
 ## Solo chain
