@@ -55,6 +55,7 @@ const Layout = (
           border-radius: 3px;
           line-height: 2;
           padding:10px;
+          background:#ffffff;
         }
 
         .Layout-children a {
@@ -99,6 +100,12 @@ const Layout = (
           margin-inline-end: 0;
           margin-inline-start: 0;
           padding: 12px;
+        }
+
+        .Layout-children img {
+          max-width:620px;
+          display:block;
+          margin:5px auto;
         }
 
         blockquote  p {

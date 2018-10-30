@@ -22,6 +22,7 @@ class Docs extends React.PureComponent<props, void> {
     render() {
         const { isLoading, docs, hasError, doc,status } = this.props;
         const docList = docs.node ? docs.node.list : []
+        docList.sort((a, b)=>{return a.index - b.index})
         return status === "error" ? (
             <PageError error={hasError} />
         ) : (
@@ -32,11 +33,11 @@ class Docs extends React.PureComponent<props, void> {
                     >
                         {isLoading && <ActivityIndicator />}
                         {!isLoading && (
-                            <div class="doc-container">
-                                <ul class="doc-ul">
+                            <div className="doc-container">
+                                <ul className="doc-ul">
                                     {docList.map((item, index) =>
-                                        <li key={index} class="doc-item">
-                                            <Link class="doc-title" to={`/docs/${item.id}/`}>{item.title}</Link>
+                                        <li key={index} className="doc-item">
+                                            <Link className="doc-title" to={`/docs/${item.id}/`}>{item.title}</Link>
                                         </li>
                                     )}
                                 </ul>
@@ -53,7 +54,7 @@ export default withPhenomicApi(Docs, props => ({
     docs: query({
         path: "content/docs",
         limit:6,
-        sort: "index"
+        sortBy: "index"
     }),
     doc: query({
         path: 'content/docs',
