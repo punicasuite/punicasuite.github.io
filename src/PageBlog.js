@@ -25,12 +25,16 @@ const PageBlog = ({ hasError, isLoading, posts }) =>
         .PageBlog-content {
           margin-bottom: 40px;
         }
+
+        .tutorial-layout {
+          background:rgba(246,248,249,1) !important;
+        }
         `
         }}
       />
       <Layout
         title={pkg.title}
-        image="https://images.unsplash.com/photo-1450566841345-741bf07d3278?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bfe51ede682d3c902bee4ecf868af22&auto=format&fit=crop&w=900&q=60"
+        classAttr={"tutorial-layout"}
       >
         {isLoading && <ActivityIndicator />}
         {!isLoading && <LatestPosts node={posts.node} />}

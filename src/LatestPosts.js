@@ -22,13 +22,17 @@ const LatestPosts = (
         }
 
         .LatestPosts-list {
-          max-width: 620px;
-          margin: auto;
-          padding: 0;
-          list-style:none;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .LatestPosts-list-item {
+          width:600px;
+          margin-right:15px;
           background: rgba(255,255,255,1);
           border-radius: 0.19rem;
           padding:2rem;
@@ -36,12 +40,14 @@ const LatestPosts = (
           border-left:3px solid rgba(255,255,255,1);
         }
 
+
         .LatestPosts-list-item:hover {
           border-left:3px solid #32A4BE;
         }
 
         .LatestPosts-list-item:hover .LatestPosts-list-item-link {
           color:#32A4BE !important;
+          text-decoration:none;
         }
 
         .LatestPosts-list-item:hover .LatestPosts-list-item-date{
@@ -49,6 +55,7 @@ const LatestPosts = (
         }
         
         .LatestPosts-list-item-link {
+          color: #36484E;
           font-size:1.5rem;
           font-family:SourceSansPro-Regular;
           font-weight:400;

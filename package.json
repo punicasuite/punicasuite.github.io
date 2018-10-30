@@ -25,5 +25,6 @@
   },
   "title": "Ontology dApp tutorials",
   "home_page": "https://ont.io",
-  "github": "http://github.com/punicasuite"
+  "github": "http://github.com/punicasuite",
+  "dependencies": {}
 }

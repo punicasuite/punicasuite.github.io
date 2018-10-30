@@ -15,7 +15,7 @@ import '../static/pageStyle.css'
 const PostLayoutNoHero = (
   { isLoading, post } /*: { isLoading: boolean, post: Object }*/
 ) => (
-  <Layout title={post && post.node && post.node.title} noHero>
+  <Layout title={post && post.node && post.node.title} classAttr="body-layout">
     {isLoading && <ActivityIndicator />}
     {!isLoading &&
       post.node && (
@@ -39,7 +39,11 @@ const PostLayoutNoHero = (
 
           <div class="Layout-children-title">{post.node.title}</div> 
           <div class="Layout-children-dateAuthor">At {post.node.date} By {post.node.author}</div>
-          <BodyRenderer>{post.node.body}</BodyRenderer>
+            <div className="body-render">
+              <BodyRenderer>
+                {post.node.body}
+              </BodyRenderer>
+            </div>
         </React.Fragment>
       )}
   </Layout>

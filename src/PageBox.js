@@ -39,6 +39,8 @@ class PageBox extends React.PureComponent<props, void> {
                                     <li key={index} class="box-item">
                                         <h3 class="box-title">{item.title}</h3>
                                         {item.github && <a href={item.github} target="_blank">Github</a> }
+                                        <p>{item.desc}</p>
+
                                         <div class="box-tags">
                                             {item.tags.map((tag) => (
                                                 <span>{tag}</span>

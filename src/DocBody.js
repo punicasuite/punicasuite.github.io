@@ -19,7 +19,11 @@ const DocBody = (
             {!isLoading &&
                 doc && (
                     <React.Fragment>
-                    <BodyRenderer>{doc.body}</BodyRenderer>
+                        <div className="body-render">
+                            <BodyRenderer>
+                                {doc.body}
+                            </BodyRenderer>
+                        </div>
                     </React.Fragment>
                 )}
         </div>

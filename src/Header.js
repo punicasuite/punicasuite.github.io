@@ -146,19 +146,11 @@ const Header = (
           )}
         </div>
       </nav>
-      {light ? (
-        // <div className="Header-light">
-        //   {title && <h1 className="Header-light-title">{title}</h1>}
-        // </div>
-        <div></div>
-      ) : (
+      {
         <div className="Header-hero">
           {title && <h1 className="Header-hero-title">{title}</h1>}
         </div>
-      )}
-      {/* <div className="Header-light">
-        {title && <h1 className="Header-light-title">{title}</h1>}
-      </div> */}
+      }
     </header>
   </React.Fragment>
 );

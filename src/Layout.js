@@ -27,6 +27,9 @@ const Layout = (
         html { box-sizing: border-box; }
         *, *::before, *::after { box-sizing: inherit; }
 
+        p {
+          margin:0
+        }
         html, body {
           margin: 0;
           padding: 0;
@@ -34,6 +37,7 @@ const Layout = (
           /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
           color: #212529;
+          font-size:16px;
         }
 
         .Layout {
@@ -50,7 +54,6 @@ const Layout = (
 
         .Layout-children {
           position: relative;
-          max-width: 630px;
           margin: 30px auto;
           border-radius: 3px;
           line-height: 2;
@@ -58,51 +61,62 @@ const Layout = (
           background:#ffffff;
         }
 
-        .Layout-children a {
+        .body-render table {
+          table-layout: fixed;
+          width:610px;
+          border:1px solid #dddddd;
+        }
+
+        .body-render table td {
+          word-wrap: break-word;
+          workd-break: break-all;
+        }
+
+        .body-render a {
           color: #36484E;
         }
 
-        .Layout-children p {
+        .body-render p {
           font-size:1rem;
-          font-family:SourceSansPro-Regular;
+          font-family:SourceSansPro-Regular, sans-serif;
           font-weight:400;
-          color:rgba(43,64,69,1);
+          color:#2B4045;
         }
 
-        .Layout-children h2 {
+        .body-render h2 {
           font-family: SourceSansPro-Bold, sans-serif; 
           font-size: 28px; color: #2B4045; 
           line-height: 24px; 
           font-weigth: 700;
         }
 
-        .Layout-children h3 {
+        .body-render h3 {
           font-family: SourceSansPro-Semibold, san-serif; 
           font-size: 20px; color: #2B4045; 
           line-height: 24px; 
           font-weight: 600;
         }
 
-        .Layout-children strong {
+        .body-render strong {
           font-family: SourceSansPro-Semibold, sans-serif; 
           font-weight: 700;
         }
 
-        .Layout-children pre {
-          overflow:scroll;
+        .body-render pre {
+          overflow:auto;
         }
 
-        .Layout-children blockquote {
+        .body-render blockquote {
           background:rgba(233,237,239,1);
           border-radius:0.19rem;
           margin-block-end: 0;
           margin-block-start: 0;
           margin-inline-end: 0;
           margin-inline-start: 0;
-          padding: 12px;
+          padding: 10px 20px;
         }
 
-        .Layout-children img {
+        .body-render img {
           max-width:620px;
           display:block;
           margin:5px auto;
@@ -112,9 +126,9 @@ const Layout = (
           margin:0 !important;
         }
 
-        .Layout-children p,
-        .Layout-children ul,
-        .Layout-children ol {
+        .body-render p,
+        .body-render ul,
+        .body-render ol {
           margin-bottom: 20px;
         }
 
@@ -139,7 +153,8 @@ const Layout = (
           font-weight:bold;
           color:rgba(106,121,124,1);
           line-height:1.25rem;
-          margin-top:15px;
+          margin-top:5px;
+          margin-bottom:25px;
         }
         
       `
@@ -151,7 +166,7 @@ const Layout = (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{title}</title>
     </Head>
-    <Header title={title} image={image} light={noHero} />
+    <Header title={title} image={image}/>
     <div className="Layout-body">
       <div className={"Layout-children "+ classAttr}>{children}</div>
     </div>

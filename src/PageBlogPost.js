@@ -4,20 +4,19 @@ import * as React from "react";
 import { withPhenomicApi, query } from "@phenomic/preset-react-app/lib/client";
 
 import PageError from "./PageError";
-import PostLayoutDefault from "./PostLayoutDefault";
-import PostLayoutNoHero from "./PostLayoutNoHero";
+import PostLayout from "./PostLayout";
 
-const layouts = {
-  default: PostLayoutDefault,
-  light: PostLayoutNoHero
-};
+// const layouts = {
+//   default: PostLayoutDefault,
+//   light: PostLayoutNoHero
+// };
 
 const PageBlogPost = ({ hasError, isLoading, post }) => {
   if (hasError) {
     return <PageError error={post.error} />;
   }
 
-  const PostLayout = layouts.light;
+  // const PostLayout = layouts.light;
   return <PostLayout isLoading={isLoading} post={post} />;
 };
 

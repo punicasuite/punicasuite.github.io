@@ -9,7 +9,6 @@ import "./highlights-theme.css";
 import Page from "./src/Page";
 import PageBlog from "./src/PageBlog";
 import PageBlogPost from "./src/PageBlogPost";
-import PageRepositories from "./src/PageRepositories";
 import PageError from "./src/PageError";
 import PageBox from './src/PageBox'
 import Docs from './src/Docs'
@@ -24,8 +23,6 @@ const routes = () => (
     <Route path="/tutorials/after/:after" component={PageBlog} />
     <Route path="/tutorials/*" component={PageBlogPost} />
     <Route path="/boxes/" component={PageBox} />   
-    <Route path="/repositories/" component={PageRepositories} />
-    <Route path="/repositories/page/:page" component={PageRepositories} />
     {/* for static hosting, we often need an explicit 404.html */}
     <Route path="404.html" component={PageError} />
     <Route path="*" component={Page} />
