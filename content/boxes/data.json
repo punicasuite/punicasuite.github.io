@@ -28,16 +28,16 @@
         "desc": "Init box developed with Punica."
     },
         {
-        "title": "tutorialtoken-box",
-        "github": "https://github.com/punica-box/tutorialtoken-box",
-        "tags": ["python", "token"],
+        "title": "interplanetary-album-box",
+        "github": "https://github.com/punica-box/interplanetary-album-box",
+        "tags": ["python","IPFS", "album"],
         "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Oep4 demo developed with Punica."
     },
     {
-        "title": "oep4-box",
-        "github": "https://github.com/punica-box/oep4-box",
-        "tags": ["typescript", "token"],
+        "title": "crypto-scallop-box",
+        "github": "https://github.com/punica-box/crypto-scallop-box",
+        "tags": ["typescript", "dapi","crypto"],
         "logo": "https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4",
         "desc": "Oep4 demo developed with Punica."
     },
