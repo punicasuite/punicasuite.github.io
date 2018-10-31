@@ -27,7 +27,6 @@ const PageBlog = ({ hasError, isLoading, posts }) =>
         }
 
         .tutorial-layout {
-          background:rgba(246,248,249,1) !important;
           max-width:100% !important;
         }
         `

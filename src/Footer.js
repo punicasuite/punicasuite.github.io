@@ -11,22 +11,34 @@ const Footer = () => (
       dangerouslySetInnerHTML={{
         __html: `
         .Footer {
-          padding: 40px;
-          color: #fff;
-          background: #2c2c2c;
-          font-size: 12px;
+          color:#F8F8FD;
+          height:80px;
+          background:#3C0D83;
         }
         .Footer-content {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          max-width: 1000px;
           margin: auto;
+          font-size:2rem;
+        }
+
+        .Footer-part {
+          height:80px;
+          line-height:80px;
+        }
+
+        .Footer-copyright {
+          padding-right:60px;
         }
 
         .Footer-link {
-          color: #fff;
+          color:#F8F8FD;
           padding: 10px;
+          font-size:20px;
+          font-family:PingFangSC-Semibold;
+          font-weight:600;
+          padding-left:54px;
         }
 
         .Footer-link:hover,
@@ -39,15 +51,14 @@ const Footer = () => (
     <footer className="Footer">
       <div className="Footer-content">
         <nav className="Footer-part">
-          <Link className="Footer-link" to="/">
-            Home
-          </Link>
-          <Link className="Footer-link" to="/tutorials/">
-            Tutorials
+          <Link className="Footer-link" to="http://ont.io">
+            ont.io
           </Link>
         </nav>
         <div className="Footer-part">
+          <div class="Footer-copyright">
           © {new Date().getFullYear()}, {pkg.title}
+          </div>
         </div>
       </div>
     </footer>

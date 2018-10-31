@@ -152,28 +152,3 @@ Commands:
    ontid    Manager your ont_id, list or add.
 
 ```
-
-```java
-import { Account, Crypto } from 'ontology-ts-sdk'
-
-//@param label {srint} Name of the account
-//@param encryptedPrivateKey {PrivateKey} The encrypted private key
-//@param password {string} The password used to decrypt private key
-//@param address {Address} The address of the account
-//@param salt {string} The salt in base64 format
-//@param params {ScryptParams} Optional scrypt params to decrypt private key
-
-var account;
-const encryptedPrivateKey = new Crypto.PrivateKey(key);//key is the encrypted private key
-try {
-    account = Account.importAccount(
-    	label, 
-    	encryptedPrivateKey
-    	password,
-	    address,
-	    salt,
-	    params)
-} catch(error) {
-    //密码或私钥不正确
-}
-```

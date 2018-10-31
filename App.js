@@ -5,8 +5,10 @@ import { Router, Route, browserHistory } from "react-router";
 import { createApp, renderApp } from "@phenomic/preset-react-app/lib/client";
 
 import "./highlights-theme.css";
+import "./static/homeStyle.css";
 
 import Page from "./src/Page";
+import Home from './src/Home';
 import PageBlog from "./src/PageBlog";
 import PageBlogPost from "./src/PageBlogPost";
 import PageError from "./src/PageError";
@@ -16,7 +18,7 @@ import ScList from './src/ScList'
 
 const routes = () => (
   <Router history={browserHistory}>
-    <Route path="/" component={Page} />
+    <Route path="/" component={Home} />
     <Route path="/tutorials/" component={PageBlog} />
     <Route path="/docs/*" component={Docs} />
     <Route path="/scpm/" component={ScList} />

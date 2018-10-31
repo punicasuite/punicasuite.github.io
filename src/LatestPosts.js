@@ -29,7 +29,7 @@ const LatestPosts = (
         }
 
         .LatestPosts-list-item {
-            width: calc(50% - 15px);
+            width: calc(30% - 15px);
             margin-right: 15px;
             background: rgba(255,255,255,1);
             border-radius: 0.19rem;
@@ -56,7 +56,7 @@ const LatestPosts = (
         
         .LatestPosts-list-item-link {
           color: #36484E;
-          font-size:1.5rem;
+          font-size:2rem;
           font-family:SourceSansPro-Regular;
           font-weight:400;
           line-height:1.94rem;
@@ -81,13 +81,14 @@ const LatestPosts = (
         }
 
         .LatestPosts-nav {
-          font-size: 14px;
+          font-size: 2rem;
           margin-top: 40px;
           text-align: center;
         }
 
         .LatestPosts-nav a {
-          color: #0067b9;
+          color: #ffffff;
+          text-decoration:underline;
         }
         `
       }}
@@ -107,7 +108,8 @@ const LatestPosts = (
                     {post.title || post.id}
                   </Link>
                   <div class="LatestPosts-list-item-line"></div>
-                  <div class="LatestPosts-list-item-date">At {post.date} By {post.author}</div>
+                  <div class="LatestPosts-list-item-date">At {post.date}</div>
+                  <div class="LatestPosts-list-item-date">By{post.author}</div>                  
                 </li>
               ))}
             </ul>

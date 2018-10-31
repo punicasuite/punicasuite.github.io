@@ -9,7 +9,6 @@ import PageError from "./PageError";
 import ActivityIndicator from "./ActivityIndicator";
 import { Route, Link } from "react-router";
 import DocBody from './DocBody'
-import '../static/docStyle.css'
 
 class Docs extends React.PureComponent<props, void> {
 
@@ -37,7 +36,7 @@ class Docs extends React.PureComponent<props, void> {
                                 <ul className="doc-ul">
                                     {docList.map((item, index) =>
                                         <li key={index} className="doc-item">
-                                            <Link className="doc-title" to={`/docs/${item.id}/`}>{item.title}</Link>
+                                            <Link className="doc-title" activeClassName="Header-active" to={`/docs/${item.id}/`}>{item.title}</Link>
                                         </li>
                                     )}
                                 </ul>

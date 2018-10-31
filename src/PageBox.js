@@ -20,6 +20,10 @@ class PageBox extends React.PureComponent<props, void> {
     static async getInitialProps(){
 
     }
+
+    toGit(github) {
+        window.open(github)
+    }
     render(){
         const { status } = this.props;
         return status === "error" ? (
@@ -33,21 +37,22 @@ class PageBox extends React.PureComponent<props, void> {
                     >
                         {status === "loading" && <ActivityIndicator />}
                         {status === "ready" && (
-                        <div class="box-container">
+                        <div className="box-container">
                             <ul>
                                 {data.map((item,index) => 
-                                    <li key={index} class="box-item">
-                                        <h3 class="box-title">{item.title}</h3>
-                                        {item.github && <a href={item.github} target="_blank">Github</a> }
-                                        <p>{item.desc}</p>
-
-                                        <div class="box-tags">
+                                    <li key={index} className="box-item" onClick={this.toGit.bind(this,item.github)}>
+                                        {(item.logo && <img src={item.logo} className="box-logo" />)}
+                                        <h3 className="box-title">{item.title}</h3>
+                                        <div className="box-tags">
                                             {item.tags.map((tag) => (
-                                                <span>{tag}</span>
+                                                <div className="box-tag">
+                                                    <i></i>
+                                                    <span>{tag}</span>
+                                                </div>
                                             ))}
                                         </div>
                                         
-                                        {(item.logo && <img src={item.logo} class="box-logo" />)}
+                                        
                                     </li>
                                 )}
                             </ul>     

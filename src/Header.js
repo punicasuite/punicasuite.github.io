@@ -9,7 +9,7 @@ const Header = (
   {
     title,
     image,
-    light
+    headerClass
   } /*: {
     title?: React.Node,
     image?: string,
@@ -22,8 +22,8 @@ const Header = (
         __html: `
         .Header {
           position: relative;
-          background:#0D181A;
-          color:#ffffff;
+          color:#F8F8FD;
+          font-size:2.8rem;
         }
 
         .Header-nav {
@@ -31,10 +31,11 @@ const Header = (
           flex-direction: row;
           justify-content: space-between;
           margin: 0 auto;
-          padding: 0;
+          padding-left: 3rem;
           line-height: 3rem;
-          background: #0D181A;
-          border-top: 4px solid  #444444;
+          background: #160033;
+          border-top: 4px solid  rgba(0,0,0,0);
+          height:6rem;
         }
 
         .Header-navPart1,
@@ -46,7 +47,7 @@ const Header = (
         .Header-link {
           display: flex;
           align-items: center;
-          padding: 0 1rem;
+          margin-right:3rem;
           color: inherit;
           text-decoration: none !important;
           transition: 0.25s all;
@@ -116,41 +117,44 @@ const Header = (
           font-weight: 800;
           margin: 40px 0;
         }
+
+        .Home-header {
+          background: rgba(0,0,0,0) !important;
+        }
+
+        .Header-active {
+          color: #00D1EA !important;
+        }
       `
       }}
     />
     <header className="Header">
-      <nav className="Header-nav">
+      <nav className={"Header-nav " + headerClass}>
         <div className="Header-navPart1">
-          <Link className="Header-link" to="/">
+          <Link className="Header-link" activeClassName="Header-active" to="/">
             Home
           </Link>
-          <Link className="Header-link" to="/docs/punica">
+            <Link className="Header-link" activeClassName="Header-active" to="/docs/punica">
               Docs
           </Link>
-            <Link className="Header-link" to="/tutorials/">
+            <Link className="Header-link" activeClassName="Header-active" to="/tutorials/">
               Tutorials
           </Link>
-            <Link className="Header-link" to="/boxes/">
+            <Link className="Header-link" activeClassName="Header-active" to="/boxes/">
             Boxes
           </Link>
-            <Link className="Header-link" to="/scpm/">
+            <Link className="Header-link" activeClassName="Header-active" to="/scpm/">
               Smart contracts
           </Link>
         </div>
-        <div className="Header-navPart2">
+        <div className="Header-navPart2 ">
           {pkg.github && (
-            <a href={pkg.github} className="Header-link">
+              <a href={pkg.github} className="Header-link Header-github">
               GitHub
             </a>
           )}
         </div>
       </nav>
-      {
-        <div className="Header-hero">
-          {title && <h1 className="Header-hero-title">{title}</h1>}
-        </div>
-      }
     </header>
   </React.Fragment>
 );
