@@ -11,13 +11,13 @@ author: Josh
 1. Open [SmartX](http://smartxdebug.ont.io/#/) and goto "tool"",you will found Decrypt Private Key at last.
 2. Take the following information from your keystore:
 
-a) Encrypted private key ( e.g. 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ)
-
-b) Address (e.g. AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1)
-
-c) Salt (e.g. YTw33YRjqKvJ51jL6CDwaA==)
-
-d) N (e.g. 4096)
+        a) Encrypted private key ( e.g. 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ)
+        
+        b) Address (e.g. AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1)
+        
+        c) Salt (e.g. YTw33YRjqKvJ51jL6CDwaA==)
+        
+        d) N (e.g. 4096)
 
 3. Input your passwrod, Password:  123456
 
