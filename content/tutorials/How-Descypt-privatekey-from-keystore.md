@@ -1,29 +1,30 @@
 ---
-title: "How to Decrypt Private Key from keystore?"
+title: "How can I decrypt the private key in my keystore?"
 date: "2018-11-03"
 author: Josh
 ---
 
 
+### How can I decrypt the private key in my keystore?
 
 
-1. Open http://smartxdebug.ont.io/#/ and goto tool,you can found Decrypt Private Key at last.
-2. Copy data from identity or account, include Key/Address/Salt/N. as below:
+1. Open [SmartX](http://smartxdebug.ont.io/#/) and goto "tool"",you will found Decrypt Private Key at last.
+2. Take the following information from your keystore:
 
-    *  Encrypted Private Key: 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ
-    
-    * Address: AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1
-    
-    * Salt:  YTw33YRjqKvJ51jL6CDwaA==
-    
-    * N:  4096
+a) Encrypted private key ( e.g. 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ)
+
+b) Address (e.g. AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1)
+
+c) Salt (e.g. YTw33YRjqKvJ51jL6CDwaA==)
+
+d) N (e.g. 4096)
 
 3. Input your passwrod, Password:  123456
 
-4. Click Transform
+4. Click "Transform"
 
-5. If your data and password is correct,it will output Private Key:
-Private Key:  ce2f8b3ad44526a2efc7964a297bb27cb8bf9baa088df0f06fcccf1b67ea39d1  
+5. If your data and password are correct, it will output your private key (e.g. ce2f8b3ad44526a2efc7964a297bb27cb8bf9baa088df0f06fcccf1b67ea39d1)
+
 
 wallet example:
 ```
