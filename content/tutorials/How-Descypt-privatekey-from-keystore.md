@@ -9,10 +9,14 @@ author: Josh
 
 1. Open http://smartxdebug.ont.io/#/ and goto tool,you can found Decrypt Private Key at last.
 2. Copy data from identity or account, include Key/Address/Salt/N. as below:
-    1). Encrypted Private Key: 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ
-    2). Address: AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1
-    3). Salt:  YTw33YRjqKvJ51jL6CDwaA==
-    4). N:  4096
+
+    *  Encrypted Private Key: 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ
+    
+    * Address: AXvprchw69nAgGakuiyM9CUFNdsU3v1bj1
+    
+    * Salt:  YTw33YRjqKvJ51jL6CDwaA==
+    
+    * N:  4096
 
 3. Input your passwrod, Password:  123456
 
