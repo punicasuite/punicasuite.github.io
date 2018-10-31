@@ -8,7 +8,8 @@ author: Josh
 ### How can I decrypt the private key in my keystore?
 
 
-1. Open [SmartX](http://smartxdebug.ont.io/#/) and goto "tool",you will found Decrypt Private Key at last.
+1. Open [SmartX](http://smartxdebug.ont.io/#/) (Chrome recommended), go to "Tool", and you will find "Decrypt Private Key" at the bottom on the page.  
+
 2. Take the following information from your keystore:
 
         a) Encrypted private key ( e.g. 6fn6KFrpXTeLQUTus82IW56mOf9zfCzsYenbbtlHGv6GD1y3q5PV3pD2LQRh7iPQ)
@@ -26,7 +27,7 @@ author: Josh
 5. If your data and password are correct, it will output your private key (e.g. ce2f8b3ad44526a2efc7964a297bb27cb8bf9baa088df0f06fcccf1b67ea39d1)
 
 
-wallet example:
+Wallet keystore example:
 ```
 
 {
