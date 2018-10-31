@@ -5,3 +5,8 @@
 .sc-link {
     color: rgb(17, 176, 230);
 }
+
+.sc-list {
+    max-width: 50% !important;
+    min-width: 400px;
+}

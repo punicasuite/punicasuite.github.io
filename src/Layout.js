@@ -59,6 +59,7 @@ const Layout = (
           line-height: 2;
           padding:10px;
           background:#ffffff;
+          max-width:630px;
         }
 
         .body-render table {

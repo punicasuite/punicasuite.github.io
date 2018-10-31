@@ -25,19 +25,19 @@ const LatestPosts = (
             margin: 0 auto;
             padding: 0;
             list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            width:80%;
         }
 
         .LatestPosts-list-item {
-          width:600px;
-          margin-right:15px;
-          background: rgba(255,255,255,1);
-          border-radius: 0.19rem;
-          padding:2rem;
-          margin-bottom:1rem;
-          border-left:3px solid rgba(255,255,255,1);
+            width: calc(50% - 15px);
+            margin-right: 15px;
+            background: rgba(255,255,255,1);
+            border-radius: 0.19rem;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid rgba(255,255,255,1);
+            min-width: 400px;
+
         }
 
 
@@ -97,9 +97,9 @@ const LatestPosts = (
       {node &&
         node.list && (
           <React.Fragment>
-            <ul className="LatestPosts-list">
+            <ul className="LatestPosts-list clearfix">
               {node.list.map(post => (
-                <li key={post.id} className="LatestPosts-list-item">
+                <li key={post.id} className="LatestPosts-list-item col-xs-12 col-md-6 col-lg-4">
                   <Link
                     to={`/tutorials/${post.id}/`}
                     className="LatestPosts-list-item-link"

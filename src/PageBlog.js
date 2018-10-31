@@ -28,6 +28,7 @@ const PageBlog = ({ hasError, isLoading, posts }) =>
 
         .tutorial-layout {
           background:rgba(246,248,249,1) !important;
+          max-width:100% !important;
         }
         `
         }}
@@ -45,7 +46,7 @@ const PageBlog = ({ hasError, isLoading, posts }) =>
 export default withPhenomicApi(PageBlog, props => ({
   posts: query({
     path: "content/tutorials",
-    limit: 6,
+    limit: 12,
     after: props.params.after
   })
 }));

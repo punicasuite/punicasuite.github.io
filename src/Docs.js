@@ -28,7 +28,7 @@ class Docs extends React.PureComponent<props, void> {
         ) : (
                 <React.Fragment>
                     <Layout
-                        title={"Docs"}
+                        title={doc.node?doc.node.title: "Docs"}
                         image=""
                     >
                         {isLoading && <ActivityIndicator />}
