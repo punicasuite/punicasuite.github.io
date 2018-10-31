@@ -19,7 +19,7 @@ author: Josh
         
         d) N (e.g. 4096)
 
-3. Input your passwrod, Password:  123456
+3. Input your password (e.g. 123456).
 
 4. Click "Transform"
 
