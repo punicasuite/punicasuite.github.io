@@ -179,7 +179,7 @@ const Header = (
             onMouseEnter={handleHover} onMouseLeave={handleLeave}>
               <span>Docs</span>
               <span className="Header-dropdown-icon glyphicon glyphicon-triangle-bottom"></span>
-              <ul class="Header-dropdown" id="Header-dropdown">
+              <ul className="Header-dropdown" id="Header-dropdown">
                 <li>
                   <Link className="Header-doc-link Header-doc-punica" activeClassName="Header-active" to="/docs/punica/">
                     Punica

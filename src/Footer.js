@@ -57,7 +57,7 @@ const Footer = () => (
           </Link>
         </nav>
         <div className="Footer-part">
-          <div class="Footer-copyright">
+          <div className="Footer-copyright">
           © {new Date().getFullYear()}, {pkg.title}
           </div>
         </div>
