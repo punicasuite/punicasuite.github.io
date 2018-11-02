@@ -23,9 +23,9 @@
 }
 
 .box-title {
-    font-size:2.8rem;
+    font-size:2.4rem;
     font-family:SanFranciscoText-Medium;
-    font-weight:500;
+    font-weight:400;
 }
 .box-tags {
     display: flex;
@@ -46,7 +46,6 @@
     height:14px;
     display: block;
     border-radius:50%;
-    background:linear-gradient(46deg, rgba(151, 91, 229, 1) 0%, rgba(251, 251, 251, 1) 100%);
     float:left;
     margin-right: 5px;
 }
@@ -54,7 +53,81 @@
     float:left;
 }
 .box-logo {
-    margin-top:3rem;
+    margin:3rem auto;
+    margin-bottom:0;
     width:14rem;
     height:14rem;
+    border-radius: 50%;
 }
+
+.box-logo-1 {
+    background:url('./assets/boxes.png') no-repeat 0 0;
+    background-size:300%;
+}
+
+.box-logo-2 {
+    background: url('./assets/boxes.png') no-repeat 50% 0;
+    background-size: 300%;
+}
+
+.box-logo-3 {
+    background: url('./assets/boxes.png') no-repeat 100% 0;
+    background-size: 300%;
+}
+
+.box-logo-4 {
+    background: url('./assets/boxes.png') no-repeat 50% 0;
+    background-size: 300%;
+}
+
+.box-logo-5 {
+    background: url('./assets/boxes.png') no-repeat 50% 100%;
+    background-size: 300%;
+}
+
+.box-logo-6 {
+    background: url('./assets/boxes.png') no-repeat 100% 100%;
+    background-size: 300%;
+}
+
+.box-tag-6 i {
+    background:linear-gradient(45deg, rgba(62, 122, 238, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.box-tag-1 span {
+    color: #3E7AEE
+}
+
+.box-tag-2 i {
+    background:linear-gradient(44deg, rgba(233, 132, 246, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.box-tag-2 span {
+    color:#E984F6;
+}
+
+.box-tag-3 i {
+    background:linear-gradient(44deg, rgba(250, 189, 90, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.box-tag-3 span {
+    color: #FABD5A;
+}
+
+.box-tag-4 i {
+    background:linear-gradient(45deg, rgba(2, 188, 225, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.box-tag-4 span {
+    color: #02BCE1;
+}
+
+.box-tag-5 i {
+    background:linear-gradient(46deg, rgba(151, 91, 229, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.box-tag-5 span {
+    color: #975BE5;
+}
+
+

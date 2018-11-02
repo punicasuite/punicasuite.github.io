@@ -4,10 +4,9 @@ name: "Punica Boxes"
 index: 2
 ---
 
-## Punica Boxes
-
 <div align="center">
-  <img src="https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4" height="200" width="200"><br><br>
+  <img src="https://avatars1.githubusercontent.com/u/43718245?s=400&amp;u=84eeb52003e5c32628fcc9cb23edd54d8596cf54&amp;v=4" height="200" width="200">
+  <h2 class="doc-title">Punica Boxes</h2>
 </div>
 
 

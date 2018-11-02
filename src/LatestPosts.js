@@ -5,7 +5,12 @@ import { Link } from "@phenomic/preset-react-app/lib/client";
 
 const LatestPosts = (
   { node, error } /*: { node?: Object, error?: Object } */
-) => (
+) => {
+  function randomLineColor() {
+    const i = Math.floor(Math.random() * 5 + 1)
+    return 'line-color-' + i
+  }
+  return (
   <React.Fragment>
     <style
       dangerouslySetInnerHTML={{
@@ -32,21 +37,21 @@ const LatestPosts = (
             width: calc(30% - 15px);
             margin-right: 15px;
             background: rgba(255,255,255,1);
-            border-radius: 0.19rem;
+            border-radius: 0.5rem;
             padding: 2rem;
             margin-bottom: 1rem;
-            border-left: 3px solid rgba(255,255,255,1);
+            border-left: 1rem solid rgba(255,255,255,1);
             min-width: 400px;
 
         }
 
 
         .LatestPosts-list-item:hover {
-          border-left:3px solid #32A4BE;
+          border-left:1rem solid #00D1EA;
         }
 
         .LatestPosts-list-item:hover .LatestPosts-list-item-link {
-          color:#32A4BE !important;
+          color:#00D1EA !important;
           text-decoration:none;
         }
 
@@ -58,7 +63,7 @@ const LatestPosts = (
           color: #36484E;
           font-size:2rem;
           font-family:SourceSansPro-Regular;
-          font-weight:400;
+          font-weight:500;
           line-height:1.94rem;
           text-decoration:none;
           display:block;
@@ -67,7 +72,6 @@ const LatestPosts = (
         .LatestPosts-list-item-line {
           width:100%;
           height:1px;
-          background:#E9EDEF;
           margin-top:1rem;
         }
         .LatestPosts-list-item-date {
@@ -107,9 +111,9 @@ const LatestPosts = (
                   >
                     {post.title || post.id}
                   </Link>
-                  <div class="LatestPosts-list-item-line"></div>
-                  <div class="LatestPosts-list-item-date">At {post.date}</div>
-                  <div class="LatestPosts-list-item-date">By{post.author}</div>                  
+                  <div className={"LatestPosts-list-item-line " + randomLineColor()} ></div>
+                  <div className="LatestPosts-list-item-date">At {post.date}</div>
+                  <div className="LatestPosts-list-item-date">By {post.author}</div>                  
                 </li>
               ))}
             </ul>
@@ -136,5 +140,6 @@ const LatestPosts = (
     </div>
   </React.Fragment>
 );
+}
 
 export default LatestPosts;

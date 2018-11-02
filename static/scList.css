@@ -7,7 +7,20 @@
 }
 
 .sc-list {
-    max-width: 50% !important;
-    min-width: 400px;
+    max-width:1440px;
+    width:60%;
+    min-width: 1200px;
     background: #ffffff;
+    padding:20px 40px;
+}
+
+.sc-item {
+    height:48px;
+    line-height: 48px;
+}
+
+.sc-item td {
+    padding:0 !important;
+    height:48px;
+    line-height: 48px !important;
 }

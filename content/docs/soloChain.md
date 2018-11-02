@@ -4,10 +4,10 @@ name: "Solo chain"
 index: 3
 ---
 
-## Solo chain
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/punicasuite/solo-chain/master/image/icon.png" height="200" width="200"><br><br>
+  <img src="https://raw.githubusercontent.com/punicasuite/solo-chain/master/image/icon.png" height="200" width="200">
+  <h2 class="doc-title">Solo Chain</h2>
 </div>
 
 

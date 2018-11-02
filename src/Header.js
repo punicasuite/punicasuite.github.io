@@ -15,15 +15,26 @@ const Header = (
     image?: string,
     light?: boolean
   } */
-) => (
+) => {
+  function handleHover() {
+    document.getElementById('Header-dropdown').style.display = 'block';
+  }
+  function handleLeave() {
+    document.getElementById('Header-dropdown').style.display = 'none';
+  }
+  return (
   <React.Fragment>
     <style
       dangerouslySetInnerHTML={{
         __html: `
         .Header {
-          position: relative;
-          color:#F8F8FD;
-          font-size:2.8rem;
+          position: fixed;
+          color: #F8F8FD;
+          font-size: 2.8rem;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
         }
 
         .Header-nav {
@@ -57,7 +68,7 @@ const Header = (
         .Header-link:hover,
         .Header-link:focus {
           color: inherit;
-          border-bottom-color: #3E85D2;
+          border-bottom-color: #00D1EA;
         }
 
         .Header-hero {
@@ -125,6 +136,36 @@ const Header = (
         .Header-active {
           color: #00D1EA !important;
         }
+
+        .Header-doc-menu {
+          position:relative;
+        }
+
+        .Header-dropdown {
+          background: #160033;
+          position: absolute;
+          top: 5rem;
+          left: 0;
+          list-style: none;
+          padding: 0;
+          z-index:1000;
+          width:200px;
+          display:none;
+          padding:1rem 1rem;
+          margin-left:-1rem;
+          border-radius: 10px;
+        }
+        .Header-doc-link {
+          color: #ffffff;
+        }
+        .Header-doc-link:hover {
+          color: #00D1EA;
+          text-decoration:none;
+        }
+        .Header-dropdown-icon {
+          font-size:16px;
+          margin-left:10px;
+        }
       `
       }}
     />
@@ -134,9 +175,28 @@ const Header = (
           <Link className="Header-link" activeClassName="Header-active" to="/">
             Home
           </Link>
-            <Link className="Header-link" activeClassName="Header-active" to="/docs/punica">
-              Docs
-          </Link>
+            <div className="Header-link Header-doc-menu"
+            onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+              <span>Docs</span>
+              <span className="Header-dropdown-icon glyphicon glyphicon-triangle-bottom"></span>
+              <ul class="Header-dropdown" id="Header-dropdown">
+                <li>
+                  <Link className="Header-doc-link Header-doc-punica" activeClassName="Header-active" to="/docs/punica/">
+                    Punica
+                  </Link>
+                </li>
+                <li>
+                  <Link className="Header-doc-link Header-doc-box" activeClassName="Header-active" to="/docs/punicaBox/">
+                    Punica Boxes
+                  </Link>
+                </li>
+                <li>
+                  <Link className="Header-doc-link Header-doc-solo" activeClassName="Header-active" to="/docs/soloChain/">
+                    Solo Chain
+                  </Link>
+                </li>
+              </ul>
+          </div>
             <Link className="Header-link" activeClassName="Header-active" to="/tutorials/">
               Tutorials
           </Link>
@@ -144,8 +204,9 @@ const Header = (
             Boxes
           </Link>
             <Link className="Header-link" activeClassName="Header-active" to="/scpm/">
-              Smart contracts
+              Smart Contracts
           </Link>
+            
         </div>
         <div className="Header-navPart2 ">
           {pkg.github && (
@@ -156,7 +217,7 @@ const Header = (
         </div>
       </nav>
     </header>
-  </React.Fragment>
-);
+  </React.Fragment>)
+}
 
 export default Header;

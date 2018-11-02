@@ -31,6 +31,7 @@ body {
 .Layout-body {
     flex: 1 0;
     background: #563983;
+    padding-top:6rem;
 }
 
 .Layout-children {
@@ -42,10 +43,10 @@ body {
 }
 
 .body-render {
-    max-width:630px;
+    max-width:980px;
     margin:0 auto;
     background:#ffffff;
-    padding:10px;
+    padding:20px 100px;
 }
 
 .body-render table {
@@ -75,7 +76,7 @@ body {
     font-size: 28px;
     color: #2B4045;
     line-height: 24px;
-    font-weigth: 700;
+    font-weight: 600;
 }
 
 .body-render h3 {
@@ -132,9 +133,10 @@ blockquote p {
 .Layout-children-title {
     font-size: 2.63rem;
     font-family: SourceSansPro-ExtraLight;
-    font-weight: 200;
+    font-weight: 400;
     color: rgba(43, 64, 69, 1);
-    line-height: 3.25rem
+    line-height: 3.25rem;
+    margin-top:20px;
 }
 
 .Layout-children-dateAuthor {
@@ -145,7 +147,6 @@ blockquote p {
     color: rgba(106, 121, 124, 1);
     line-height: 1.25rem;
     margin-top: 5px;
-    margin-bottom: 25px;
 }
 
 .home-bg {
@@ -168,4 +169,62 @@ blockquote p {
 .doc-ul a {
     color: #ffffff;
     font-size: 2.4rem;
+}
+
+.doc-title {
+    font-size:2.4rem;
+    font-weight:600px;
+}
+
+.Header-doc-link {
+    background-size:2rem 2rem;
+    padding-left: 2.5rem;
+    font-size:2.4rem;
+}
+
+.body-layout {
+    background:#ffffff;
+    max-width:980px;
+    margin:0 auto;
+}
+
+.body-title-container {
+    padding-left: 100px;
+    padding-top:40px
+}
+
+.Header-doc-punica {
+    background: url('./assets/punica.png') no-repeat left center;
+    background-size:2rem 2rem;
+}
+
+.Header-doc-box {
+    background: url('./assets/box.png') no-repeat left center;
+    background-size:2rem 2rem;
+
+}
+
+.Header-doc-solo {
+    background: url('./assets/solo.png') no-repeat left center;
+    background-size:2rem 2rem;
+}
+
+.line-color-1 {
+    background:linear-gradient(90deg, rgba(62, 122, 238, 1) 50%, rgba(251, 251, 251, 1) 100%);
+}
+
+.line-color-2 {
+    background:linear-gradient(90deg, rgba(233, 132, 246, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.line-color-3 {
+    background:linear-gradient(90deg, rgba(250, 189, 90, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.line-color-4 {
+    background:linear-gradient(90deg, rgba(2, 188, 225, 1) 0%, rgba(251, 251, 251, 1) 100%);
+}
+
+.line-color-5 {
+    background:linear-gradient(90deg, rgba(151, 91, 229, 1) 0%, rgba(251, 251, 251, 1) 100%);
 }

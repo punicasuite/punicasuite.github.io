@@ -30,6 +30,7 @@ const Footer = () => (
 
         .Footer-copyright {
           padding-right:60px;
+          font-size:16px;
         }
 
         .Footer-link {

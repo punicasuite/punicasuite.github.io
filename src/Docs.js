@@ -33,13 +33,13 @@ class Docs extends React.PureComponent<props, void> {
                         {isLoading && <ActivityIndicator />}
                         {!isLoading && (
                             <div className="doc-container">
-                                <ul className="doc-ul">
+                                {/* <ul className="doc-ul">
                                     {docList.map((item, index) =>
                                         <li key={index} className="doc-item">
                                             <Link className="doc-title" activeClassName="Header-active" to={`/docs/${item.id}/`}>{item.title}</Link>
                                         </li>
                                     )}
-                                </ul>
+                                </ul> */}
                                 <DocBody doc={doc.node}/> 
                             </div>)}
                     </Layout>

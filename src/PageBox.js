@@ -24,6 +24,10 @@ class PageBox extends React.PureComponent<props, void> {
     toGit(github) {
         window.open(github)
     }
+    randomIndex() {
+        const i = Math.floor(Math.random()*5 + 1)
+        return i
+    }
     render(){
         const { status } = this.props;
         return status === "error" ? (
@@ -42,10 +46,11 @@ class PageBox extends React.PureComponent<props, void> {
                                 {data.map((item,index) => 
                                     <li key={index} className="box-item" onClick={this.toGit.bind(this,item.github)}>
                                         {(item.logo && <img src={item.logo} className="box-logo" />)}
+                                        {(!item.logo && <div className={"box-logo box-logo-" + this.randomIndex()}></div>)}
                                         <h3 className="box-title">{item.title}</h3>
                                         <div className="box-tags">
                                             {item.tags.map((tag) => (
-                                                <div className="box-tag">
+                                                <div className={"box-tag " +  'box-tag-'+this.randomIndex()}>
                                                     <i></i>
                                                     <span>{tag}</span>
                                                 </div>
