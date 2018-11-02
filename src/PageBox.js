@@ -25,7 +25,7 @@ class PageBox extends React.PureComponent<props, void> {
         window.open(github)
     }
     randomIndex() {
-        const i = Math.floor(Math.random()*5 + 1)
+        const i = Math.floor(Math.random()*6 + 1)
         return i
     }
     render(){
