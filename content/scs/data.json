@@ -95,6 +95,17 @@
         "language": "Python",
         "author": "Jack",
         "desc": "Smart contract libs"
+    },
+    {
+        "title": "Ontology Smart Contract",
+        "github": "https://github.com/ontio/ontology-smartcontract",
+        "keywords": [
+            "Ontology",
+            "Smart contract"
+        ],
+        "language": "Python",
+        "author": "Josh",
+        "desc": "Smart contract libs"
     }
 
 ]

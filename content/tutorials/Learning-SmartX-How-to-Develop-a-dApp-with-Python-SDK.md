@@ -1,5 +1,9 @@
-<h1 align="center">Learning SmartX: How to Develop a DApp with Python SDK</h1>
-<p align="center" class="version">Version 0.1</p>
+---
+title: "Learning SmartX: How to Develop a DApp with Python SDK?"
+date: "2018-11-04"
+author: Yue Zhao
+---
+
 
 ## Test a smart contract on Ontology private net
 

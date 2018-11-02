@@ -1,6 +1,6 @@
 ---
 title: "Smart contract tutorial"
-date: "2018-11-04"
+date: "2018-11-01"
 author: Josh Chow
 ---
 
