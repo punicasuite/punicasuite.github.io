@@ -368,3 +368,33 @@ blockquote p {
 .line-color-5 {
     background:linear-gradient(90deg, rgba(151, 91, 229, 1) 0%, rgba(251, 251, 251, 1) 100%);
 }
+
+.Footer-link-ontology {
+    background: url('./assets/ontology.png') no-repeat center center;
+    background-size: contain;
+    width: 100px;
+    height: 25px;
+    margin-right: 30px;
+}
+
+.Footer-link-smartx {
+    background:url('./assets/smartx.png') no-repeat center center;
+    background-size:contain;
+    width:85px;
+    height: 20px;
+    margin-right: 30px;
+}
+
+.Footer-link-cyano {
+    background:url('./assets/cyanoWallet.svg') no-repeat left center;
+    background-size:20px 20px;
+    margin-right: 30px;
+    padding-left: 25px;
+    color: #e4dcdc;
+    font-size:16px;
+}
+
+.Footer-link-cyano:hover {
+    color: #e4dcdc;
+    text-decoration: none;
+}

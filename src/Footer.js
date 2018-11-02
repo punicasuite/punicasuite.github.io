@@ -26,10 +26,15 @@ const Footer = () => (
         .Footer-part {
           height:80px;
           line-height:80px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding-left:3rem;
         }
 
         .Footer-copyright {
-          padding-right:60px;
+          padding-right:3rem;
           font-size:16px;
         }
 
@@ -52,9 +57,15 @@ const Footer = () => (
     <footer className="Footer">
       <div className="Footer-content">
         <nav className="Footer-part">
-          <Link className="Footer-link" to="http://ont.io">
-            ont.io
+          <Link className="Footer-link-ontology" to="https://ont.io" target="_blank">
           </Link>
+           < Link className = "Footer-link-smartx" to = "https://smartx.ont.io" target = "_blank" >
+          </Link>
+          < Link className = "Footer-link-cyano"
+          to = "https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon"
+          target = "_blank" >
+            Cyano Wallet
+            </Link>
         </nav>
         <div className="Footer-part">
           <div className="Footer-copyright">
