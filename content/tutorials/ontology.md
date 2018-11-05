@@ -4,16 +4,6 @@ date: "2018-11-04"
 author: Josh
 ---
 
-<object width="425" height="350">
-  <param name="movie" value="https://v.qq.com/x/page/u0784b610k9.html" />
-  <param name="wmode" value="transparent" />
-  <embed src="https://v.qq.com/x/page/u0784b610k9.html"
-         type="application/x-shockwave-flash"
-         wmode="transparent" width="425" height="350" />
-</object>
-
-[![IMAGE ALT TEXT HERE](https://s1.ax1x.com/2018/09/03/Pz5JO0.png)](https://v.qq.com/x/page/u0784b610k9.html) 
-
 
 **Blockchain(Ontology Node)**
 
