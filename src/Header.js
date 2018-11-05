@@ -58,11 +58,12 @@ const Header = (
         .Header-link {
           display: flex;
           align-items: center;
-          margin-right:3rem;
+          margin-right:1rem;
           color: inherit;
           text-decoration: none !important;
           transition: 0.25s all;
           border-bottom: 4px solid transparent;
+          color:#F8F8FD !important;
         }
 
         .Header-link:hover,
@@ -156,7 +157,7 @@ const Header = (
           border-radius: 10px;
         }
         .Header-doc-link {
-          color: #ffffff;
+          color: #F8F8FD !important;
         }
         .Header-doc-link:hover {
           color: #00D1EA;
@@ -166,57 +167,100 @@ const Header = (
           font-size:16px;
           margin-left:10px;
         }
+        .navbar {
+          width:100vw;
+          border:none;
+          background:#160033;
+          font-size:2rem;
+        }
+
+        .Header-brand {
+          float: left;
+          padding: 15px 15px;
+          line-height: 20px;
+          font-size: 18px;
+        }
+
+        .Header-brand:hover {
+          text-decoration:none;
+        } 
+
+        .dropdown-toggle {
+          background: #160033 !important;
+          color:#F8F8FD !important;
+        }
       `
       }}
     />
-    <header className="Header">
-      <nav className={"Header-nav " + headerClass}>
-        <div className="Header-navPart1">
-          <Link className="Header-link" activeClassName="Header-active" to="/">
-            Home
-          </Link>
-            <div className="Header-link Header-doc-menu"
-            onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-              <span>Docs</span>
-              <span className="Header-dropdown-icon glyphicon glyphicon-triangle-bottom"></span>
-              <ul className="Header-dropdown" id="Header-dropdown">
-                <li>
-                  <Link className="Header-doc-link Header-doc-punica" activeClassName="Header-active" to="/docs/punica/">
-                    Punica
+  
+      <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+
+    <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+            <Link className="Header-link Header-brand" activeClassName="Header-active" to="/">
+                    Home
                   </Link>
-                </li>
-                <li>
-                  <Link className="Header-doc-link Header-doc-box" activeClassName="Header-active" to="/docs/punicaBox/">
-                    Punica Boxes
-                  </Link>
-                </li>
-                <li>
-                  <Link className="Header-doc-link Header-doc-solo" activeClassName="Header-active" to="/docs/soloChain/">
-                    Solo Chain
-                  </Link>
-                </li>
-              </ul>
-          </div>
-            <Link className="Header-link" activeClassName="Header-active" to="/tutorials/">
-              Tutorials
-          </Link>
-            <Link className="Header-link" activeClassName="Header-active" to="/boxes/">
-            Boxes
-          </Link>
-            <Link className="Header-link" activeClassName="Header-active" to="/scpm/">
-              Smart Contracts
-          </Link>
-            
-        </div>
-        <div className="Header-navPart2 ">
-          {pkg.github && (
-              <a href={pkg.github} className="Header-link Header-github">
-              GitHub
-            </a>
-          )}
-        </div>
-      </nav>
-    </header>
+                </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Suite <span class="caret"></span></a>
+                <ul class="dropdown-menu Header-dropdown ">
+                        <li>
+                    <Link className="Header-doc-link Header-doc-punica" activeClassName="Header-active" to="/docs/punica/">
+                      Punica
+                        </Link>
+                        </li>
+                        <li>
+                    <Link className="Header-doc-link Header-doc-box" activeClassName="Header-active" to="/docs/punicaBox/">
+                      Punica Boxes
+                        </Link>
+                        </li>
+                        <li>
+                    <Link className="Header-doc-link Header-doc-solo" activeClassName="Header-active" to="/docs/soloChain/">
+                      Solo Chain
+                        </Link>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                    <li>
+                <Link className="Header-link" activeClassName="Header-active" to="/tutorials/">
+                  Tutorials
+                </Link>
+                    </li>
+                    <li>
+                <Link className="Header-link" activeClassName="Header-active" to="/boxes/">
+                  Boxes
+                </Link>
+                    </li>
+                    <li>
+                      <Link className="Header-link" activeClassName="Header-active" to="/scpm/">
+                        Smart Contracts
+                            </Link>
+                    </li>
+                  </ul>
+                  
+                    <ul class="nav navbar-nav navbar-right">
+                      <li>
+                        <a href={pkg.github} className="Header-link Header-github">
+                          GitHub
+                       </a>
+                      </li>
+                      
+                    </ul>
+    </div>
+  </div>
+</nav>
   </React.Fragment>)
 }
 

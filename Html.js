@@ -21,7 +21,9 @@ export default ({ App, render }: PhenomicHtmlPropsType) => {
         {helmet.script.toComponent()}
         {helmet.noscript.toComponent()}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous"/>
-        <script
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossOrigin="anonymous"></script>
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
             (function(designWidth, maxWidth) {
@@ -73,7 +75,7 @@ export default ({ App, render }: PhenomicHtmlPropsType) => {
 })(1920, 1920);
             `
           }}
-        />
+        /> */}
       </head>
       {/* // $FlowFixMe it works on my machine */}
       <body {...helmet.bodyAttributes.toComponent()}>

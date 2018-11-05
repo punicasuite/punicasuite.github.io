@@ -10,6 +10,39 @@ const LatestPosts = (
     const i = Math.floor(Math.random() * 5 + 1)
     return 'line-color-' + i
   }
+
+  function renderListItem(post) {
+    return (
+      <li key={post.id} className="LatestPosts-list-item">
+        <Link
+          to={`/tutorials/${post.id}/`}
+          className="LatestPosts-list-item-link"
+        >
+          {post.title || post.id}
+        </Link>
+        <div className={"LatestPosts-list-item-line " + randomLineColor()} ></div>
+        <div className="LatestPosts-list-item-date">At {post.date}</div>
+        <div className="LatestPosts-list-item-date">By {post.author}</div>
+      </li>
+    )
+  }
+  function renderList(docList) {
+    const list = [];
+    const rows = Math.floor(docList.length/3)
+    for(let i=0; i< rows; i++) {
+      // list.push(renderListItem(docList[i]))
+      // docList[i + 1] && list.push(renderListItem(docList[i + 1]))
+      // docList[i + 2] && list.push(renderListItem(docList[i + 2]))   
+      list.push(
+        <div className="tutorial-row">
+          {renderListItem(docList[i])}
+          {docList[i + 1] && renderListItem(docList[i + 1])}
+          {docList[i + 2] && renderListItem(docList[i + 2])}
+        </div>
+      )
+    }
+    return list;
+  }
   return (
   <React.Fragment>
     <style
@@ -30,7 +63,6 @@ const LatestPosts = (
             margin: 0 auto;
             padding: 0;
             list-style: none;
-            width:80%;
         }
 
         .LatestPosts-list-item {
@@ -94,6 +126,12 @@ const LatestPosts = (
           color: #ffffff;
           text-decoration:underline;
         }
+        .tutorial-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         `
       }}
     />
@@ -103,7 +141,8 @@ const LatestPosts = (
         node.list && (
           <React.Fragment>
             <ul className="LatestPosts-list clearfix">
-              {node.list.map(post => (
+              {renderList(node.list)}
+              {/* {node.list.map(post => (
                 <li key={post.id} className="LatestPosts-list-item col-xs-12 col-md-6 col-lg-4">
                   <Link
                     to={`/tutorials/${post.id}/`}
@@ -115,7 +154,7 @@ const LatestPosts = (
                   <div className="LatestPosts-list-item-date">At {post.date}</div>
                   <div className="LatestPosts-list-item-date">By {post.author}</div>                  
                 </li>
-              ))}
+              ))} */}
             </ul>
             <div className="LatestPosts-nav">
               {node &&
