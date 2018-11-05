@@ -28,11 +28,9 @@ const LatestPosts = (
   }
   function renderList(docList) {
     const list = [];
-    const rows = Math.floor(docList.length/3)
-    for(let i=0; i< rows; i++) {
-      // list.push(renderListItem(docList[i]))
-      // docList[i + 1] && list.push(renderListItem(docList[i + 1]))
-      // docList[i + 2] && list.push(renderListItem(docList[i + 2]))   
+    const rows = Math.ceil(docList.length/3)
+    for(let j=0; j< rows; j++) {
+      let i = j*3; 
       list.push(
         <div className="tutorial-row">
           {renderListItem(docList[i])}
