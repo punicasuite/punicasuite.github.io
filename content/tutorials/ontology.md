@@ -7,7 +7,7 @@ author: Josh
 <object width="425" height="350">
   <param name="movie" value="https://v.qq.com/x/page/u0784b610k9.html" />
   <param name="wmode" value="transparent" />
-  <embed src="http://www.youtube.com/user/wwwLoveWatercom?v=BTRN1YETpyg"
+  <embed src="https://v.qq.com/x/page/u0784b610k9.html"
          type="application/x-shockwave-flash"
          wmode="transparent" width="425" height="350" />
 </object>
