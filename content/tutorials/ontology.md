@@ -12,6 +12,8 @@ author: Josh
          wmode="transparent" width="425" height="350" />
 </object>
 
+[![IMAGE ALT TEXT HERE](https://s1.ax1x.com/2018/09/03/Pz5JO0.png)](https://v.qq.com/x/page/u0784b610k9.html) 
+
 
 **Blockchain(Ontology Node)**
 
