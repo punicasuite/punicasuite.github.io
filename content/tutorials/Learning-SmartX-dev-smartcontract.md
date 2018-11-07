@@ -1,5 +1,5 @@
 ---
-title: "Learning SmartX: Smart Contract Development "
+title: "Learning SmartX: Smart Contract Development"
 date: "2018-11-07"
 author: Josh Chow
 ---
@@ -37,7 +37,7 @@ Create a new project in the language of your choice and use one of the templates
 
 Compile your smart contract but **do not deploy it yet**.
 
-![Compile](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_compile.jpg)
+![Compile](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/SmartX_compile.jpg)
 
 
 <p><br>
@@ -50,7 +50,7 @@ Download and install [Solo-chain](https://github.com/punicasuite/solo-chain/rele
 
 Please make note of the IP address shown in the dashboard for later use.
 
-![Solo-chain dashboard](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_interface.jpg)
+![Solo-chain dashboard](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/solo-chain_interface.jpg)
 
 <p><br>
 
@@ -60,11 +60,11 @@ Cyano wallet is a Google Chrome extension that is integrated with SmartX and all
 
 Install [Cyano wallet](https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon) and click on the settings cog in the top right hand corner of the first screen.
 
-![Cyano settings cog](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
+![Cyano settings cog](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
 
 Change the network to **Private-Net** and put the IP address shown in the solo-chain interface in Cyano (typically 127.0.0.1).
 
-![Cyano settings page](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_page.jpg)
+![Cyano settings page](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_settings_page.jpg)
 
 Once Cyano is successfully connected to your private-net, the connection icon in the bottom right hand side of the screen will show a connected icon (as above).
 
@@ -79,12 +79,12 @@ Once you are satisfied with your smart contract, you can use SmartX to deploy it
 
 Select Deploy in SmartX and enter the appropriate details in the information fields (Name, Author, etc).  Once this has been done, select deploy.
 
-![SmartX deploy](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_deploy.jpg)
+![SmartX deploy](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/SmartX_deploy.jpg)
 
 <p>
 Cyano wallet will be launched and the smart contract deploy screen will be shown.  Ensure the details are correct and select confirm.  
 
-![Cyano SC deploy](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_SC_deploy.jpg)
+![Cyano SC deploy](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_SC_deploy.jpg)
 
 Enter your Cyano wallet password to deploy your smart contract.
 <p><br>
@@ -93,22 +93,22 @@ Enter your Cyano wallet password to deploy your smart contract.
 
 You can verify the smart contract has been deployed correctly by clicking the Smart Contract icon in solo-chain which will show you the contract hash and information you entered in SmartX.
 
-![Solo-chain SC list](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_SC_list.jpg)
+![Solo-chain SC list](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/solo-chain_SC_list.jpg)
 <p><br>
 
 ### Invoke smart contract in SmartX
 
 The next step is to invoke your smart contract which is done in SmartX by selecting Run and selecting any methods (if applicable).  In this example we are using the 'Arith' template so we will be using the add method to add two numbers together.
 
-![SmartX invoke SC](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC.jpg)
+![SmartX invoke SC](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/SmartX_invoke_SC.jpg)
 
 Once you click on Run, Cyano wallet will prompt you to invoke the smart contract which can be done by clicking confirm and entering your password.
 
-![Cyano invoke SC](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_invoke_SC.jpg)
+![Cyano invoke SC](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_invoke_SC.jpg)
 
 The results of the invocation will be displayed in the log window of SmartX.
 
-![SmartX invoke SC results](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC_result.jpg)
+![SmartX invoke SC results](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/SmartX_invoke_SC_result.jpg)
 <p><br>
 
 
@@ -116,11 +116,11 @@ The results of the invocation will be displayed in the log window of SmartX.
 
 You can also use solo-chain to check the invoke function by selecting the Transactions tab and looking for a transaction type of Invoke.
 
-![Solo-chain invoke transaction](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_transaction_invoke.jpg)
+![Solo-chain invoke transaction](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/solo-chain_transaction_invoke.jpg)
 
 More detailed information is available by clicking on the Detail link.
 
-![Solo-chain invoke transaction details](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_transaction_invoke_details.jpg)
+![Solo-chain invoke transaction details](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/solo-chain_transaction_invoke_details.jpg)
 <p><br>
 
 
@@ -130,11 +130,11 @@ Once you have completed the above steps, you may wish to deploy your smart contr
 
 To do this, in Cyano select the settings cog in the top right hand corner.
 
-![Cyano settings cog](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
+![Cyano settings cog](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
 
 Change to network to Main-Net and click Save.
 
-![Cyano settings mainnet](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_page_mainnet.jpg)
+![Cyano settings mainnet](https://raw.githubusercontent.com/ontio/documentation/master/docs/lib/images/Cyano_settings_page_mainnet.jpg)
 
 Ensure you have a Main-net wallet setup in Cyano with sufficient gas to deploy the contract before proceeding.
 
