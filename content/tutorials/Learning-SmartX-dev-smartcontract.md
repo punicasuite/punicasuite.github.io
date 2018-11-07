@@ -13,10 +13,10 @@ The steps used will be:
 
 1. Create/edit smartcontract in SmartX (**do not deploy at this step**)
 2. Download and install solo-chain
-3. Install Cynao in chrome and use private net which will connnect to solo-chain
-4. Deploy smartcontract in SmartX which will use cynao to deploy to solo-chain
+3. Install Cynao in Google Chrome and use private-net which will connnect to solo-chain
+4. Deploy smartcontract in SmartX which will use Cyano to deploy to solo-chain
 5. Check the smartcontract has deployed successfully on the solo-chain
-6. Invoke smartcontract in SmartX  which will use cynao to invoke on solo-chain
+6. Invoke smartcontract in SmartX  which will use Cyano to invoke on solo-chain
 7. Check transction on solo-chain
 8. Deploy/Invoke to Mainnet using SmartX and Cyano (**only do this when you have completed development**)
 
@@ -25,7 +25,7 @@ The following tools will be needed:
 
 * [SmartX](https://smartx.ont.io/) - our online smart contract IDE and debugger
 * [Solo-chain](https://github.com/punicasuite/solo-chain/releases) - a prebuilt private-net for development
-* [Cyano wallet](https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon) - an Ontology chrome extension wallet
+* [Cyano wallet](https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon) - an Ontology Google Chrome extension wallet
 <p><br>
 
 
@@ -33,7 +33,7 @@ The following tools will be needed:
 
 We will develop, compile and test our smart contract using the [SmartX](https://smartx.ont.io/) tool. If you are new to SmartX, please read over the [SmartX Tutorial](https://ontio.github.io/documentation/SmartX_Tutorial_en.html) which will guide you thorugh the process of using the tool.
 
-Create a new project in the language of your choice and use one of the templates to work with if you don't have your own smart contract. 
+Create a new project in the language of your choice and use one of the templates (we will be using Arith) to work with if you don't have your own smart contract.
 
 Compile your smart contract but **do not deploy it yet**.
 
@@ -58,7 +58,7 @@ Please make note of the IP address shown in the dashboard for later use.
 
 Cyano wallet is a Google Chrome extension that is integrated with SmartX and allows developers to deploy/invoke smart contracts either on a private-net or the Ontology mainnet.
 
-Install [Cyano wallet](https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon) and click on the setting cog in the top right hand corner of the first screen.
+Install [Cyano wallet](https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm?utm_source=chrome-ntp-icon) and click on the settings cog in the top right hand corner of the first screen.
 
 ![Cyano settings cog](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
 
@@ -77,7 +77,7 @@ Finally, initiate a transaction and claim your ONG which will be used to pay for
 
 Once you are satisfied with your smart contract, you can use SmartX to deploy it to your private-net.  SmartX will interact with Cyano wallet in order to deploy and pay the transaction fee(s).
 
-Select Deploy in SmartX and enter the appropriate details in the Information fields (Name, Author, etc).  Once this has been done, select deploy.
+Select Deploy in SmartX and enter the appropriate details in the information fields (Name, Author, etc).  Once this has been done, select deploy.
 
 ![SmartX deploy](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_deploy.jpg)
 
@@ -89,14 +89,14 @@ Cyano wallet will be launched and the smart contract deploy screen will be shown
 Enter your Cyano wallet password to deploy your smart contract.
 <p><br>
 
-### Check the smartcontract has deployed successfully
+### Check the smart contract has deployed successfully
 
 You can verify the smart contract has been deployed correctly by clicking the Smart Contract icon in solo-chain which will show you the contract hash and information you entered in SmartX.
 
 ![Solo-chain SC list](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_SC_list.jpg)
 <p><br>
 
-### Invoke smartcontract in SmartX
+### Invoke smart contract in SmartX
 
 The next step is to invoke your smart contract which is done in SmartX by selecting Run and selecting any methods (if applicable).  In this example we are using the 'Arith' template so we will be using the add method to add two numbers together.
 
@@ -114,9 +114,9 @@ The results of the invocation will be displayed in the log window of SmartX.
 
 ### Check invocation transction
 
-You can also use solo-cahain to check the invoke function by selecting the Transactions tab and looking for a transaction type of Invoke.
+You can also use solo-chain to check the invoke function by selecting the Transactions tab and looking for a transaction type of Invoke.
 
-![Solo-chain invoke transaction](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC_result.jpg)
+![Solo-chain invoke transaction](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_transaction_invoke.jpg)
 
 More detailed information is available by clicking on the Detail link.
 
