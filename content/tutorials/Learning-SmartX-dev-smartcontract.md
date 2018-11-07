@@ -1,7 +1,7 @@
 ---
 title: "Learning SmartX: Smart Contract Development"
 date: "2018-11-07"
-author: Josh Chow
+author: Panther
 ---
 
 
