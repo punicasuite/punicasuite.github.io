@@ -1,6 +1,6 @@
 ---
 title: "Learning SmartX: Smart Contract Development "
-date: "2018-10-26"
+date: "2018-11-07"
 author: Josh Chow
 ---
 
@@ -87,8 +87,57 @@ Cyano wallet will be launched and the smart contract deploy screen will be shown
 ![Cyano SC deploy](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_SC_deploy.jpg)
 
 Enter your Cyano wallet password to deploy your smart contract.
+<p><br>
+
+### Check the smartcontract has deployed successfully
 
 You can verify the smart contract has been deployed correctly by clicking the Smart Contract icon in solo-chain which will show you the contract hash and information you entered in SmartX.
 
 ![Solo-chain SC list](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_SC_list.jpg)
+<p><br>
 
+### Invoke smartcontract in SmartX
+
+The next step is to invoke your smart contract which is done in SmartX by selecting Run and selecting any methods (if applicable).  In this example we are using the 'Arith' template so we will be using the add method to add two numbers together.
+
+![SmartX invoke SC](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC.jpg)
+
+Once you click on Run, Cyano wallet will prompt you to invoke the smart contract which can be done by clicking confirm and entering your password.
+
+![Cyano invoke SC](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_invoke_SC.jpg)
+
+The results of the invocation will be displayed in the log window of SmartX.
+
+![SmartX invoke SC results](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC_result.jpg)
+<p><br>
+
+
+### Check invocation transction
+
+You can also use solo-cahain to check the invoke function by selecting the Transactions tab and looking for a transaction type of Invoke.
+
+![Solo-chain invoke transaction](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/SmartX_invoke_SC_result.jpg)
+
+More detailed information is available by clicking on the Detail link.
+
+![Solo-chain invoke transaction details](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/solo-chain_transaction_invoke_details.jpg)
+<p><br>
+
+
+### Deploy to Mainnet 
+
+Once you have completed the above steps, you may wish to deploy your smart contract to the Ontology Mainnet for general purpose use.
+
+To do this, in Cyano select the settings cog in the top right hand corner.
+
+![Cyano settings cog](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_cog.jpg)
+
+Change to network to Main-Net and click Save.
+
+![Cyano settings mainnet](https://raw.githubusercontent.com/panther142/documentation/master/docs/lib/images/Cyano_settings_page_mainnet.jpg)
+
+Ensure you have a Main-net wallet setup in Cyano with sufficient gas to deploy the contract before proceeding.
+
+Finally, return to SmartX and follow the same process as you did in the **Deploy smart contract in SmartX** section ensuring that Cyano shows it is connected to Main-net.
+
+Your smart contract will now be deployed to the Ontology Main-net and you can invoke it as you did in the **Invoke smartcontract in SmartX** section.
