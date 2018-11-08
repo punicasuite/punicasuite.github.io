@@ -21,7 +21,7 @@ author: Josh
 * [Postman](https://documenter.getpostman.com/view/1459587/RWaRP68Y)
 * [CLI Guide](https://github.com/ontio/ontology/blob/master/docs/specifications/cli_user_guide_CN.md)
 * [Ontology explorer](https://explorer.ont.io/)
-* [Sinature server](https://github.com/ontio/ontology/blob/master/docs/specifications/sigsvr_CN.md)
+* [Signature server](https://github.com/ontio/ontology/blob/master/docs/specifications/sigsvr_CN.md)
 * [documentation](https://ontio.github.io/documentation/)
 * [Sync block](https://github.com/zzsZhou/OntSynHandler)
 * [Ontid](https://ontio.github.io/documentation/ontology_DID_en.html)
