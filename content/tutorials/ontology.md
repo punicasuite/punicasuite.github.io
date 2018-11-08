@@ -27,7 +27,7 @@ author: Josh
 * [Ontid](https://ontio.github.io/documentation/ontology_DID_en.html)
 * [Ontology Distributed Identity Framework](https://github.com/ontio/ontology-DID)
 * [Oeps](https://github.com/ontio/OEPs)
-* [DDFX](https://github.com/ontio/ontology-ddxf)
+* [DDXF](https://github.com/ontio/ontology-ddxf)
 * [Ontology test](https://github.com/ontio/ontology-test)
 
 **Smart Contract(compile,deploy,invoke,debug,test)**
