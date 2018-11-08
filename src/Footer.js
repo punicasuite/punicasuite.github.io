@@ -41,6 +41,15 @@ const Footer = () => (
           © {new Date().getFullYear()}, {pkg.title}
           </div>
         </div>
+
+        <div className="Footer-part">
+          <div className="Footer-link">
+            < Link className="Footer-link" to="https://truffleframework.com"
+              target="_blank" >
+              Acknowledgement to Truffle Framework
+          </Link>
+          </div>
+        </div>
       </div>
     </footer>
   </React.Fragment>
