@@ -86,8 +86,19 @@
         "desc": "Smart contract libs"
     },
     {
-        "title": "Smart contract API",
+        "title": "Smart contract API Website",
         "github": "https://apidoc.ont.io/smartcontract/",
+        "keywords": [
+            "Smart contract",
+            "API"
+        ],
+        "language": "Python",
+        "author": "Jack",
+        "desc": "Smart contract libs"
+    },
+    {
+        "title": "Smart contract API",
+        "github": "https://github.com/ontio/neo-boa/blob/master/Ontology_smart_contract_API_for_Python.md",
         "keywords": [
             "Smart contract",
             "API"
