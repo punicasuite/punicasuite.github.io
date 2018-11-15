@@ -9,7 +9,7 @@ index: 1
   <img src="https://raw.githubusercontent.com/punicasuite/punica-python/master/punica.png" height="200" width="200"><br>
 </div>
 
-Welcome to Punica! Punica has (almost) everything you need for Ontology DApp development.
+Welcome to Punica! Punica has (almost) everything you need for Ontology DApp development.Please see the more detailed documentation.[Here](http://dev-docs.ont.io/#/docs-en/Punica/punica)
 
 ### Features
 

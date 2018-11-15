@@ -9,7 +9,7 @@ index: 2
   <h2 class="doc-title">Punica Boxes</h2>
 </div>
 
-
+Please see the more detailed documentation.[Here](http://dev-docs.ont.io/#/docs-en/Punica/punica)
 
 ### Creating a box
 
