@@ -4,7 +4,7 @@ date: "2018-11-04"
 author: zhaoyue
 ---
 
-These video is in chinese. [Docs in Video](https://github.com/xavizhao/Ontology-Development-Tutorial)
+These video is in chinese. [Docs in Video](https://github.com/punicasuite/tutorials/tree/master/toolkits-docs)
 
 ### 1. Documentation Introduction
 
