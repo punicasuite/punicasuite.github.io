@@ -5,7 +5,7 @@ index: 2
 ---
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/punicasuite/punica-python/master/sc-vscode-exten.png" height="200" width="200">
+  <img src="https://raw.githubusercontent.com/ontio-community/bounty-program-report/master/image/sc-vscode-exten.png" height="200" width="200">
   <h2 class="doc-title">Sc-exten-vscode</h2>
 </div>
 
@@ -30,5 +30,5 @@ Features:
     
     
 <div align="center">
-  <img src="https://raw.githubusercontent.com/punicasuite/punica-python/master/vscode.png" >
+  <img src="https://raw.githubusercontent.com/ontio-community/bounty-program-report/master/image/vscode.png" >
 </div>    
