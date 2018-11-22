@@ -18,17 +18,16 @@ index: 1
 - [2. Installation](#2-installation)
 - [3. Quickstart](#3-quickstart)
 - [4. Getting started](#4-getting-started)
-    - [4.1. Create a Project](#41-create-a-project)
-        - [4.1.1. Initializing a New Project](#411-initializing-a-new-project)
-	- [4.1.2. Creating a Box Project](#412-creating-a-box-project)
-    - [4.2. Compiling](#42-compiling)
-    - [4.3. Deployment](#43-deployment)
-    - [4.4. Invocation](#44-invocation)
-    - [4.5. Node](#45-node)
-    - [4.6. Scpm](#46-scpm)
-    - [4.7  Smartx](#47-smartx)
-    - [4.8  Test](#48-test)
-    - [4.9  Wallet](#49-wallet)
+    - [Initializing a New Project](#initializing-a-new-project)
+	- [Using a Punica Box Project](#Using-a-Punica-Box-Project)
+	- [Compiling](#Compiling)
+	- [Deployment](#Deployment)
+	- [Invocation](#Invocation)
+	- [Node (not yet implemented)](#Node)
+	- [Scpm (not yet implemented)](#Scpm)
+	- [Smartx (not yet implemented)](#Smartx)
+	- [Unit Testing](#Unit-Testing)
+	- [Wallet](#Wallet)
 
 <!-- /TOC -->
 
@@ -76,16 +75,20 @@ There are a few technical requirements before we start. Please install the follo
 
 
 
-### Install punica cli
+### Installation
 
 ```shell
 pip install punica
 ```
+```
+npm install punica-ts -g
+```
 or 
-
 ```shell
 python setup.py install
 ```
+**Note: If you are using Python, please ensure you have [Python v3.7](https://www.python.org/downloads/release/python-370/) or above installed.**
+<p><br>
 
 ## 3. Quickstart
 
@@ -123,21 +126,22 @@ Once this operation is completed, you'll now have a project structure with the f
 
 ## 4. Getting started
 
-To use most Punica commands, you need to run them against an existing Punica project. So the first step is to create a Punica project.
+### Initializing a New Project
 
-### 4.1. Create a Project
+You can create an empty Punica project with no smart contracts using the `init` command.
 
-#### 4.1.1. Initializing a New Project
+```shell
+punica init
+```
 
-You can create a bare Punica project with no smart contracts included, use `punica init` command.
-
-Once this operation is completed, you'll now have a project structure with the following items:
+Once this operation has completed, you will have a project structure with the following items:
 
 - `contracts/`: Directory for Ontology smart contracts.
-- `src/`: Directory for DApp source file.
-- `test/`: Directory for test files for testing your application and contracts.
-- `wallet/`: Directory for save Ontology wallet file.
+- `src/`: Directory for DApp source file(s).
+- `test/`: Directory for test files to test your application and contracts.
+- `wallet/`: Directory for saved Ontology wallet file.
 
+For more usage information, you can use `punica init --help`
 ```shell
 punica init --help
 Usage: punica init [OPTIONS]
@@ -148,27 +152,29 @@ Options:
   -h, --help  Show this message and exit.
 ```
 
-**Note**: If you not run punica cli in you project root directory, you need to use `-p` or `--project` option to specify your DApp project's path.
+**Note**: If you are not running punica-cli in the root directory of your project, you need to use the `-p` or `--project` option to specify your DApp project path.
+<p><br>
 
-#### 4.1.2. Creating a Box Project
+### Using a Punica Box Project
 
-You can create a bare project template, but for those just getting started, you can use Punica Boxes, which are example applications and project templates.
+For those just getting started, you can use Punica Boxes which are example dApps/project templates to help you.
 
-We'll use the [ontology-tutorialtoken box](https://github.com/wdx7266/ontology-tutorialtoken), which creates a OEP4 token that can be transferred between accounts:
+We will be using the [Tutorialtoken-box](https://github.com/punica-box/tutorialtoken-box) through-out this tutorial which creates an OEP4 token that can be transferred between accounts.
 
-- Create a new directory for your Punica project:
+Create a new directory for your Punica project:
 
 ```shell
 mkdir tutorialtoken
 cd tutorialtoken
 ```
 
-- Download ("unbox") the MetaCoin box:
+Download ("unbox") the Tutorialtoken-box Box:
 
 ```shell
 punica unbox tutorialtoken
 ```
 
+For more usage information, you can use `punica unbox --help`
 ```shell
 punica unbox --help
 Usage: punica unbox [OPTIONS] BOX_NAME
@@ -179,6 +185,31 @@ Options:
   -h, --help  Show this message and exit.
 ```
 
+#### Configure the network used by Punica-Cli
+
+The Tutorialtoken-box contains a file called `punica-config.json' in the project root directory which defauls to the Ontology Testnet.  You can alter the DefaultNet setting in this file to set which network Punica-Cli will use.
+
+Example punica-config.json:
+```json
+{
+  "networks": {
+    "testNet": {
+      "host": "http://polaris3.ont.io",
+      "port": 20336
+    },
+    "mainNet": {
+      "host": "http://dappnode1.ont.io",
+      "port": 20336
+    },
+    "privateNet": {
+      "host": "http://127.0.0.1",
+      "port": 20336
+    }
+  },
+  "defaultNet":"testNet"
+}
+```
+
 **Note**:
 
 - You can use the `punica unbox <box-name>` command to download any of the other Punica Boxes.
@@ -186,7 +217,7 @@ Options:
 
 
 
-### 4.2. Compiling
+### Compiling
 
 You can use the following command to compile your Ontology smart contracts:
 
@@ -217,224 +248,239 @@ Options:
   -h, --help        Show this message and exit.
 ```
 
-**Note**: If you not run punica cli in you project root directory, you need to use `-p` or `--project` option to specify your DApp project's path.
+**After you compile the smart contract ensure you have sufficient ONG in the account that will be paying for the deployment (see next step) or else deployment will fail.  The address for the Tutorialtoken-box is ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6**
 
-### 4.3. Deployment
+**Note**: If you are not running punica-cli in the root directory of your project, you need to use the `-p` or `--project` option to specify your DApp project path.
+<p><br>
 
-Before deploying, you need to refine both configuration files. One configuration is punica-config.json in which we configure the
-blockchain network we use, another is default-config.json in which we configure the contract information.
+### Deployment
 
-To deploy your contract, run the following:
+To deploy the Tutotialtoken-box smart contract to the selected network, run the following:
 
 ```shell
-$ punica deploy
+punica deploy
 ```
-
-This will deploy your smart contract to blockchain.
 
 A simple deployment process looks like this:
 
 ```shell
-Using network 'privateNet'.
+Using network 'testNet'.
 
-Use the default wallet file: wallet.json
-Running deployment: hello_ontology.avm
+Running deployment: oep4.avm
 	Deploying...
-	Deploy to: cb9f3b7c6fb1cf2c13a40637c189bdd066a272b4
+	... 0x0131c56b6a00527ac46a51527ac46a00c3044e616d659c6409006593096c7566
+	Deploy to: 0xf9f47e6a80482eb1c8831789f46dbc5a4f606222
 Deploy successful to network...
-	 Contract address is cb9f3b7c6fb1cf2c13a40637c189bdd066a272b4
-	 Txhash is 6ad673d77fee33829240ab1f197c0b7109d4fe44b6a8e46fc3d5dca93b7b289d
+	... 0xc08a440a7f93cc7229fee15b55455fac51ec15153753303bd252c710547ecb62
+Enjoy your contract:)
 ```
 
-For more usage, you can use `punica deploy --help` command.
+For more usage information, you can use `punica deploy --help`
 
 ```shell
-$ punica deploy --help
+punica deploy --help
 Usage: punica deploy [OPTIONS]
 
   Deploys the specified contracts to specified chain.
 
 Options:
-  --network TEXT  Specify which network the contracts will be deployed.
-  --avm TEXT      Specify which avm file will be deployed.
-  --wallet TEXT   Specify which wallet file will be used.
-  --config TEXT   Specify which deploy config file will be used.
-  -h, --help      Show this message and exit.
+  --network TEXT   Specify which network the contract will be deployed.
+  --avm TEXT       Specify which avm file will be deployed.
+  --wallet TEXT    Specify which wallet file will be used.
+  -h, --help       Show this message and exit.
 ```
 
-**Note**:
+**Notes**:
 
-- If you not run punica cli in you project root directory, you need to use `-p` or `--project` option to specify your DApp project's path.
-- If multi `avm` file exist in your `bin` directory, you need to use `--avm` option to specify which contract you want to deploy.
-- If multi wallet file exist in your `wallet` directory, you may need to use `--wallet` option to specify which wallet you want to use. otherwise, a random wallet file in `wallet` directory will be used.
+- If you are not running punica-cli in the root directory of your project, you need to use the `-p` or `--project` option to specify your DApp project path.
+- If multiple `avm` files exist in your `contracts/build` directory, you need to use the `--avm` option to specify which contract you want to deploy.
+- If a multi-wallet file exist in your `wallet` directory, you may need to use the `--wallet` option to specify which wallet you want to use. If you do not specify a random wallet file in `wallet` directory will be used.
+<p><br>
 
-### 4.4. Invocation
+### Invocation
 
-If you want to invoke a list of function in your deployed smart contract, a convenience way is to use `Invoke` command.
-before we invoke , we should first configure the default-config.json.
+To setup your smart contract you must run the `punica invoke` command before invoking any specific functions.
 
-Support we have an invoke config in our `default-config.json`:
+```shell
+punica invoke
+```
+
+Output:
+```shell
+Running invocation: oep4.json
+Using network 'testNet'.
+
+Unlock default payer account...
+	Unlock account: ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6
+    Please input account password: 
+	Unlock successful...
+Invoking Name...
+	Invoke successful...
+		... Invoke result: 546f6b656e4e616d65
+Invoking Symbol......
+```
+
+In the `default-config.json` file of the Tutorialtoken-box is an 'invokeConfig' section that defines the functions of our smart contract. See example below:
 
 ```json
-"abi": "hello_ontology_abi.json",
-        "defaultPayer": "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ",
-        "gasPrice": 0,
-        "gasLimit": 20000,
-        "functions": [
-            {
-                "name": "hello",
-                "params": {
-                    "msg": "Address:AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
-                },
-                "signers": {
-                    "m": 1,
-                    "signer": [
-                        "AUr5QUfeBADq6BMY6Tp5yuMsUNGpsD7nLZ"
-                    ]
-                },
-                "preExec": true
+"invokeConfig":{
+    "abi": "oep4_token_abi.json",
+    "defaultPayer": "ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+    "gasPrice": 0,
+    "gasLimit": 21000000,
+    "functions": [
+        {   
+	    "name": "Name",
+            "params": {},
+            "signers": {},
+            "preExec": true
+        },
+	{
+            "name": "Symbol",
+            "params": {},
+            "signers": {},
+            "preExec": true
+        },
+	{
+            "name": "Decimal",
+            "params": {},
+            "signers": {},
+            "preExec": true
+        },
+        {
+	    "name": "TotalSupply",
+            "params": {},
+            "signers": {},
+            "preExec": true
+        },
+        {
+	    "name":"BalanceOf",
+            "params": {
+                "account": "ByteArray:ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6"
             },
-            {
-                "name": "testListNum",
-                "params": {
-                    "msg": [1,2,3,4,5]
-                },
-                "signers": {},
-                "preExec": true
+            "signers": {},
+            "preExec": true
+        },
+        {
+	    "name": "Transfer",
+            "params": {
+                "from_acct": "ByteArray:ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+                "to_acct": "ByteArray:AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve",
+                "amount": 1
             },
-            {
-                "name": "testListNum2",
-                "params": {
-                    "msgList": [1,2,3,4,5],
-                    "msg": "String:test"
-                },
-                "signers": {},
-                "preExec": true
+            "signers": {
+                "m": 1,
+                "signer": ["ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6"]
             },
-            {
-                "name": "testListStr",
-                "params": {
-                    "msgList": [
-                        "String:hello",
-                        "String:world"
-                    ],
-                    "msg":"String:test"
-                },
-                "signers": {},
-                "preExec": true
+            "preExec": false
+        },
+        {
+	    "name": "TransferMulti",
+            "params": {
+                "args": [
+                    {
+                        "from": "ByteArray:ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+                        "to": "ByteArray:AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve",
+                        "amount": 1
+                    },
+                    {
+                        "from": "ByteArray:AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve",
+                        "to": "ByteArray:Ad4H6AB3iY7gBGNukgBLgLiB6p3v627gz1",
+                        "amount": 2
+                    }
+                ]
             },
-            {
-                "name": "testListByteArray",
-                "params": {
-                    "msgList": [
-                        "ByteArray:Hello",
-                        "ByteArray:world"
-                    ],
-                    "msg": "String:hello"
-                },
-                "signers": {},
-                "preExec": true
+            "signers": {
+                "m": 1,
+                "signer": ["ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6", "AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve"]
             },
-            {
-                "name": "testListStruct",
-                "params": {
-                    "msgList": [
-                        {
-                            "name": "String:hello",
-                            "age": 1
-                        },
-                        {
-                            "name": "String:hello2",
-                            "age": 2
-                        }
-                    ],
-                    "msg": "String:test"
-                },
-                "signers": {},
-                "preExec": true
-            }
-        ]
-    }
+            "payer": "ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+            "preExec": false
+        },
+        {
+	    "name": "Allowance",
+            "params": {
+                "owner": "ByteArray:ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+                "spender": "ByteArray:AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve"
+            },
+            "signers": {
+                "m": 1,
+                "signer": ["ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6"]
+            },
+            "preExec": false
+        },
+        {
+	    "name": "TransferFrom",
+            "params": {
+                "sender": "ByteArray:AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve",
+                "from_acct": "ByteArray:ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6",
+                "to_acct": "ByteArray:Ad4H6AB3iY7gBGNukgBLgLiB6p3v627gz1",
+                "amount": 1
+            },
+            "signers": {
+                "m": 1,
+                "signer": ["ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6"]
+            },
+            "preExec": false
+        },
+        {
+	    "name": "Init",
+            "params": {},
+            "signers": {},
+            "preExec": true
+        }
+    ]
+}
 ```
-View the functions that can be called
 
+To see the list of available functions:
 ```shell
 punica invoke list
 ```
 
-The following output we will get:
+Response when running `punica invoke list' on the Tutorialtoken-box
 ```shell
 All Functions:
-	 hello
-	 testListNum
-	 testListNum2
-	 testListStr
-	 testListByteArray
-	 testListStruct
+         Init
+         Name
+         Symbol
+         Decimal
+         TotalSupply
+         BalanceOf
+         Transfer
+         TransferMulti
+         Allowance
+         TransferFrom
 ```
 
-To run our invoke function list, run the following:
-
-`punica invoke`
-
-The following output we will get:
+For more usage information, you can use `punica invoke --help`
 
 ```shell
-$ punica invoke
-Using network 'privateNet'.
+punica invoke --help
+Usage: punica invoke [OPTIONS]
 
-Running invocation: hello_ontology_abi.json
-Unlock default payer account...
-Invoking  hello
-Invoke successful
-Invoke result: ['8f651d459b4f146380dab28e7cfb9d4bb9c3fcd1']
-Invoking  testListNum
-Invoke successful
-Invoke result: [['01', '02', '03', '04', '05']]
-Invoking  testListNum2
-Invoke successful
-Invoke result: [['01', '02', '03', '04', '05'], '74657374']
-Invoking  testListStr
-Invoke successful
-Invoke result: [['68656c6c6f', '776f726c64'], '74657374']
-Invoking  testListByteArray
-Invoke successful
-Invoke result: [['48656c6c6f', '776f726c64'], '68656c6c6f']
-Invoking  testListStruct
-Invoke successful
-Invoke result: [['68656c6c6f', '01'], ['68656c6c6f32', '02'], '74657374']
-	
-```
-
-For more usage, you can use `punica invoke --help` command.
-
-```shell
-$ punica invoke --help
-Usage: punica invoke [OPTIONS] COMMAND [ARGS]...
-
-  Invoke the function list in default-config or specify config.
+  Invoke the function list in punica-config.
 
 Options:
-  --network TEXT    Specify which network the contracts will be deployed.
-  --wallet TEXT     Specify which wallet file will be used.
-  --functions TEXT  Specify which function will be executed.
-  --config TEXT     Specify which config file will be used.
-  --preexec TEXT    preExec the function.
-  -h, --help        Show this message and exit.
-
-Commands:
-  list  List all the function in default-config or...
+  --network TEXT   Specify which network the contract will be deployed.
+  --wallet TEXT    Specify which wallet file will be used.
+  --functions Text Specify which function will be used.
+  -h, --help       Show this message and exit.
 ```
 
-**Note**:
+**Notes**:
 
-- If you not run punica cli in you project root directory, you need to use `-p` or `--project` option to specify your DApp project's path.
-- If multi wallet file exist in your `wallet` directory, you may need to use `--wallet` option to specify which wallet you want to use. otherwise, a random wallet file in `wallet` directory will be used.
+- If you are not running punica-cli in the root directory of your project, you need to use the `-p` or `--project` option to specify your DApp project path.
+- If a multi-wallet file exist in your `wallet` directory, you may need to use the `--wallet` option to specify which wallet you want to use. If you do not specify a random wallet file in `wallet` directory will be used.
+<p><br>
 
-### 4.5 Node
+### Node
 
+Shows the download link for Solo-chain, a pre-built Ontology private-net.
+
+For more usage information, you can use `punica node --help'
 ```shell
-$ punica node
+punica node --help
 Usage: punica node [OPTIONS]
 
    Ontology Blockchain private net in test mode. please download from
@@ -443,31 +489,42 @@ Usage: punica node [OPTIONS]
 Options:
    -h, --help  Show this message and exit.
 ```
+<p><br>
 
-### 4.6. Scpm
+### Scpm (not yet implemented)
+
+The smart contract package manager allows you to download and publish punica boxes to the community repository.
 
 ```shell
-$ punica scpm
+punica scpm
 Usage: punica scpm [OPTIONS]
 
    smart contract package manager，support download and publish.
 
 Options:
    -h, --help  Show this message and exit.
-
 ```
-### 4.7  Smartx
+<p><br>
+
+### Smartx (not yet implemented)
+
+SmartX is Ontology's online smart contract IDE and debugger.
 
 ```shell
-$ punica smartx
+punica smartx
 
 Please go to Smartx for debugging smart contracts:
 http://smartx.ont.io/#/
 ```
-### 4.8  Test
+<p><br>
 
+### Unit Testing
+
+The test function allows you to run automated test against your smart contract using a test file.
+
+For more usage information, you can use `punica test --help'
 ```shell
-$ punica test -h
+punica test -h
 Usage: punica test [OPTIONS] COMMAND [ARGS]...
 
   Unit test with specified smart contract
@@ -479,10 +536,25 @@ Options:
 Commands:
   template  generate test template file
 ```
-### 4.9  Wallet
+<p><br>
 
+### Wallet
+
+Allows you to manage your wallet with functions such as adding, listing or deleting accounts or OntID's as well as transfering assets (ONT/ONG).
+
+Example:
 ```shell
-$ punica wallet
+punica wallet account list
+Account:
+        ANH5bHrrt111XwNEnuPZj6u95Dd6u7G4D6
+        AazEvfQPcQ2GEFFPLF1ZLwQ7K5jDn81hve
+        Ad4H6AB3iY7gBGNukgBLgLiB6p3v627gz1
+        ARLvwmvJ38stT9MKD78YtpDak3MENZkoxF
+```
+
+For more usage information, you can use `punica wallet --help'
+```shell
+punica wallet --help
 Usage: punica wallet [OPTIONS] COMMAND [ARGS]...
 
    Manager your asset, ontid, account.
@@ -491,9 +563,8 @@ Options:
    -h, --help  Show this message and exit.
 
 Commands:
-   account  Manager your account.
-   asset    Manager your asset, transfer, balance,...
-   ontid    Manager your ont_id, list or add.
+   account  Manage your account.
+   asset    Manage your asset, transfer, balance,...
+   ontid    Manage your ont_id, list or add.
 
 ```
-

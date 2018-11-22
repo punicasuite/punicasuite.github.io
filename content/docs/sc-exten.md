@@ -13,7 +13,7 @@ Sc-exten-vscode(VSCode Extension for Ontology)
 
 This extension add support for development and testing of Smart contracts on Ontology blockchain.
 
-Features:
+### Features:
 * Compile
     1. Python smart contracts (.py)
     2. CSharp smart contracts (.cs)
