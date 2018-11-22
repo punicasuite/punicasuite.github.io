@@ -230,6 +230,11 @@ const Header = (
                       Solo Chain
                         </Link>
                         </li>
+                  <li>
+                    <Link className="Header-doc-link Header-doc-scExtension" activeClassName="Header-active" to="/docs/sc-exten/">
+                      SC Extension
+                        </Link>
+                  </li>
                       </ul>
                     </li>
                     

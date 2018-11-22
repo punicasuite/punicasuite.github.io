@@ -354,6 +354,11 @@ blockquote p {
     background-size:2rem 2rem;
 }
 
+.Header-doc-scExtension {
+    background: url('./assets/scExtension.png') no-repeat left center;
+    background-size:2rem 2rem;
+}
+
 .line-color-1 {
     background:linear-gradient(90deg, rgba(62, 122, 238, 1) 50%, rgba(251, 251, 251, 1) 100%);
 }
