@@ -1,7 +1,7 @@
 [
     {
         "title": "OEP4",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/OEP4Sample/OEP4Sample.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/OEP4Sample/OEP4Sample.py",
         "keywords": [
             "OEP4",
             "token"
@@ -12,7 +12,7 @@
     },
     {
         "title": "OEP5",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/OEP5Sample/OEP5Sample.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/OEP5Sample/OEP5Sample.py",
         "keywords": [
             "OEP5",
             "token"
@@ -23,7 +23,7 @@
     },
     {
         "title": "Storage example",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/Storage_Example/storage_example.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/Storage_Example/storage_example.py",
         "keywords": [
             "Example",
             "Storage"
@@ -34,7 +34,7 @@
     },
     {
         "title": "Struct example ",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/Struct_Example/struct_example.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/Struct_Example/struct_example.py",
         "keywords": [
             "Example",
             "Struct"
@@ -45,7 +45,7 @@
     },
     {
         "title": "Invoke native in sc",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/NativeAssetInvoke/native_asset_invoke.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/NativeAssetInvoke/native_asset_invoke.py",
         "keywords": [
             "Native smart contract"
         ],
@@ -55,7 +55,7 @@
     },
     {
         "title": "Migrate Contract",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/MigrateDestruct/migrate_destroyWithinContract.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/MigrateDestruct/migrate_destroyWithinContract.py",
         "keywords": [
             "Smart contract",
             "Migrate Contract"
@@ -66,7 +66,7 @@
     },
     {
         "title": "Event",
-        "github": "https://github.com/tonyclarking/python-template/blob/master/EventTest/event_test.py",
+        "github": "https://github.com/ONT-Avocados/python-template/blob/master/EventTest/event_test.py",
         "keywords": [
             "Event"
         ],
@@ -76,7 +76,7 @@
     },
     {
         "title": "Smart contract libs",
-        "github": "https://github.com/tonyclarking/python-template/tree/master/libs",
+        "github": "https://github.com/ONT-Avocados/python-template/tree/master/libs",
         "keywords": [
             "Smart contract",
             "Libs"
