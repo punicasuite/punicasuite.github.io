@@ -42,6 +42,7 @@ Punica provides developers with a complete set of open-source development tools 
 * [Punica Python CLI](https://github.com/punicasuite/punica-python) or [Punica TypeScript CLI](https://github.com/punicasuite/punica-ts) - used to download, compile, deploy and invoke smart contracts
 * [Punica boxes](http://punica.ont.io/boxes/) - pre-configured smart contract templates
 * [Solo-chain](https://github.com/punicasuite/solo-chain/releases) - a prebuilt private-net for development 
+* [VScode Extension](https://github.com/punicasuite/vscode-ext-ontology) - VScode Extension for Ontology
 
 
 
@@ -49,7 +50,7 @@ Punica provides developers with a complete set of open-source development tools 
 * Punica-Cli supports smart contract compilation, deployment, invocation, testing, and one line commands.
 * Punica-Cli implements both Python and TypeScript versions for different language developers.
 * The Punica website offers a wealth of documentation and contract templates.
-* Solo chain has a UI test node for easy viewing of blocks, transactions, contracts, contract notify, and more.
+* Solo chain has a private node for easy viewing of blocks, transactions, contracts, contract notify, and more.
 * Automatically generate dApp project directory, provide various types of boxes, easily develop dApps based on Punica-Boxes.
 * The contract test configuration and test function in SmartX use the same standard.
 * Smart contract package management tools provided.
