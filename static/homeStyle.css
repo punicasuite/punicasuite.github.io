@@ -635,3 +635,7 @@ blockquote p {
         padding:10px !important;
     }
 }
+
+.navbar-toggle .icon-bar {
+    background-color: #dddddd !important;
+}
