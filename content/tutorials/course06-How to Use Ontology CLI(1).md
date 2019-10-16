@@ -1,6 +1,6 @@
 ---
 title: "Course06: How to Use Ontology CLI (1)"
-date: "2018-11-16"
+date: "2018-11-15"
 author: zhaoyue
 ---
 

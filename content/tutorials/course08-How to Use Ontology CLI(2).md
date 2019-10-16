@@ -1,6 +1,6 @@
 ---
 title: "Course08: How to Use Ontology CLI (2)"
-date: "2018-11-18"
+date: "2018-11-13"
 author: zhaoyue
 ---
 

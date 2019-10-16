@@ -1,6 +1,6 @@
 ---
 title: "Course02: How to Use Solo-chain"
-date: "2018-11-12"
+date: "2018-11-19"
 author: zhaoyue
 ---
 
